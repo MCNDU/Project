@@ -70,6 +70,7 @@
   <ItemGroup>
     <Content Include="02_Web_Page\Choose_AdvPro.aspx" />
     <Content Include="02_Web_Page\Statistic_AdvPro.aspx" />
+    <Content Include="02_Web_Page\Teacher_Assign.aspx" />
     <Content Include="App_Data\Project_Db.mdf" />
     <Content Include="App_Data\Project_Db_log.ldf">
       <DependentUpon>Project_Db.mdf</DependentUpon>
@@ -91,6 +92,13 @@
     </Compile>
     <Compile Include="02_Web_Page\Statistic_AdvPro.aspx.designer.cs">
       <DependentUpon>Statistic_AdvPro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="02_Web_Page\Teacher_Assign.aspx.cs">
+      <DependentUpon>Teacher_Assign.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="02_Web_Page\Teacher_Assign.aspx.designer.cs">
+      <DependentUpon>Teacher_Assign.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
