@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,13 +9,18 @@ using System.Data.SqlClient;
 
 namespace Project._02_Web_Page {
     public partial class Choose_AdvPro : System.Web.UI.Page {
+
+		//³sµ²¸ê®Æ®w¡A©R¦W¬°cnStr
+		//@"¸ê®Æ¨Ó·½=(¥»¦a¸ê®Æ®w)\"
         String cnStr = @"Data Source=(LocalDB)\MSSQLLocalDB;" +
                     "AttachDBFilename=|DataDirectory|Project_Db.mdf";
+
         protected void Page_Load (object sender, EventArgs e) {
 
         }
 
-        protected void Clean (object sender, System.EventArgs e) //é‡ç½®æ‰€æœ‰æŒ‡å°æ•™æˆ
+        //­«¸m©Ò¦³«ü¾É±Ğ±Â
+        protected void Clean (object sender, System.EventArgs e) 
         {
             int Row, Col;
 
@@ -45,7 +50,7 @@ namespace Project._02_Web_Page {
             Table Tb;
             TextBox TB;
 
-            //å°‡å„ä¸‹æ‹‰å¼é¸å–®èˆ‡å„è‡ªçš„è‡ªè¨‚æŒ‡å°æ•™æˆæ¬„ä½ç›¸é—œè¯
+            //±N¦U¤U©Ô¦¡¿ï³æ»P¦U¦Ûªº¦Û­q«ü¾É±Ğ±ÂÄæ¦ì¬ÛÃöÁp
             if (DDL_Id == "Select_Adv_1") {
                 Tb = this.Table_Costom_1;
                 TB = this.Adv_PointRemain_1;
@@ -59,7 +64,7 @@ namespace Project._02_Web_Page {
                 TB = this.Adv_PointRemain_3;
             }
 
-            //ä¾ç…§ä¸‹æ‹‰å¼é¸å–®çš„å…§å®¹ï¼Œæ±ºå®šè‡ªè¨‚æŒ‡å°æ•™æˆæ¬„ä½çš„é¡¯ç¤ºèˆ‡å¦
+            //¨Ì·Ó¤U©Ô¦¡¿ï³æªº¤º®e¡A¨M©w¦Û­q«ü¾É±Ğ±ÂÄæ¦ìªºÅã¥Ü»P§_
             if (DDL_Value == "Custom") {
                 Tb.Visible = true;
             }
@@ -67,7 +72,7 @@ namespace Project._02_Web_Page {
                 Tb.Visible = false;
             }
 
-            //æ ¹æ“šä¸‹æ‹‰å¼é¸å–®å…§å®¹ï¼Œè‡ªè³‡æ–™åº«å–å‡ºç›¸å°æ‡‰çš„ã€Œå‰©é¤˜é»æ•¸ã€
+            //®Ú¾Ú¤U©Ô¦¡¿ï³æ¤º®e¡A¦Û¸ê®Æ®w¨ú¥X¬Û¹ïÀ³ªº¡u³Ñ¾lÂI¼Æ¡v
             if (DDL_Index > 1) {
                 int R = DDL_Index - 2;
 
@@ -134,7 +139,7 @@ namespace Project._02_Web_Page {
                 }
             }
 
-            //é»é¸çš„æŒ‰éµç‚ºã€Œè‡ªè¨‚æŒ‡å°æ•™æˆã€
+            //ÂI¿ïªº«öÁä¬°¡u¦Û­q«ü¾É±Ğ±Â¡v
             else {
 
             }

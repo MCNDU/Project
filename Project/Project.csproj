@@ -115,6 +115,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="03_Code_Refactor\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
