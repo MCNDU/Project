@@ -1,6 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Project",
+    "\\Project\\02_Web_Page",
+    "\\Project\\App_Data",
+    "\\Project\\Models",
+    "\\Project\\Properties"
   ],
+  "SelectedNode": "\\Project\\03_Code_Refactor",
   "PreviewInSolutionExplorer": false
 }

@@ -38,6 +38,7 @@ namespace Project._02_Web_Page {
                 this.Title.Rows [0].Cells [0].Text = "國防大學管理學院資訊管理學系在職組" + S + "期論文指導教授統計名冊";
             }
         }
+
         protected void Item_Load (object sender, EventArgs e) {
             this.Item_Title.Height = this.GridView1.Height;
         }
