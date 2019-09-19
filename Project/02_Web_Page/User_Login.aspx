@@ -7,7 +7,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>國防大學論文審查系統</title>
     <style type="text/css">
-
         .body {
             font-family: sans-serif; 
             background-image: url('../Image/User_Login_BG.jpg'); 
@@ -99,12 +98,12 @@
             <asp:TextBox ID="Account_TBX" runat="server" CssClass="txtid" required="帳號為您的學號" placeholder="學號" />
             <asp:Label Text="密碼" CssClass="lblpass" runat="server" />
             <asp:TextBox ID="Password_TBX" runat="server" CssClass="txtpass" required="請填寫密碼" placeholder="********" TextMode="Password" />
-            <asp:Button ID="Login_BTN" Text="登入" CssClass="btnsubmit" runat="server" />
+            <asp:Button ID="Login_BTN" Text="登入" CssClass="btnsubmit" runat="server" OnClick="Login" />
 
             <%-- Login_ForgetPassword.aspx & Login_ChangePassword.aspx 尚未建立!! --%>
             <asp:HyperLink ID="HyperLink1" Text="忘記密碼" CssClass="btnforget" runat="server" Target="_self" NavigateUrl="~/Login_ForgetPassword.aspx" />
             <asp:HyperLink ID="HyperLink2" Text="更改密碼" CssClass="btnchange" runat="server" Target="_self" NavigateUrl="~/Login_ChangePassword.aspx" />
-
+            <asp:Label ID="Alert_LB" runat="server"></asp:Label>
         </form>
     </div>
 </body>

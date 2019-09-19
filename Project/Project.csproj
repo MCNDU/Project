@@ -76,6 +76,10 @@
     <Content Include="App_Data\Project_Db_log.ldf">
       <DependentUpon>Project_Db.mdf</DependentUpon>
     </Content>
+    <Content Include="Image\Project_Db.mdf" />
+    <Content Include="Image\Project_Db_log.ldf">
+      <DependentUpon>Project_Db.mdf</DependentUpon>
+    </Content>
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
     <Content Include="bin\Project.dll" />
@@ -190,7 +194,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="03_Code_Refactor\" />
     <Folder Include="Models\" />
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
