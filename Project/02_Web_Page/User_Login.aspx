@@ -11,8 +11,9 @@
             font-family: sans-serif; 
             background-image: url('../Image/User_Login_BG.jpg'); 
             background-size: cover; 
+            background-repeat: repeat;
             padding: 0px; 
-            margin: 0px
+            margin: 0px;
         }
 
         .div {
@@ -100,9 +101,8 @@
             <asp:TextBox ID="Password_TBX" runat="server" CssClass="txtpass" required="請填寫密碼" placeholder="********" TextMode="Password" />
             <asp:Button ID="Login_BTN" Text="登入" CssClass="btnsubmit" runat="server" OnClick="Login" />
 
-            <%-- Login_ForgetPassword.aspx & Login_ChangePassword.aspx 尚未建立!! --%>
-            <asp:HyperLink ID="HyperLink1" Text="忘記密碼" CssClass="btnforget" runat="server" Target="_self" NavigateUrl="~/Login_ForgetPassword.aspx" />
-            <asp:HyperLink ID="HyperLink2" Text="更改密碼" CssClass="btnchange" runat="server" Target="_self" NavigateUrl="~/Login_ChangePassword.aspx" />
+            <asp:HyperLink ID="HyperLink1" Text="忘記密碼" CssClass="btnforget" runat="server" Target="_self" NavigateUrl="User_Login_Forget_Password.aspx" />
+            
             <asp:Label ID="Alert_LB" runat="server"></asp:Label>
         </form>
     </div>

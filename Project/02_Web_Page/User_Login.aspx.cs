@@ -53,7 +53,7 @@ namespace Project._02_Web_Page
 
                             if (sdr.GetValue(0).ToString() == "Student")
                             {
-                                Response.Redirect("Choose_AdvPro.aspx");
+                                Response.Redirect("HomePage_Student.aspx");
                             }
 
                             else if (sdr.GetValue(0).ToString() == "Teacher")

@@ -1,0 +1,76 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="Project._01_Master_Page.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <title>線上論文審查系統</title>
+
+    <!-- 載入Bootstrap -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="../css/animate.min.css">
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            font-size: large;
+        }
+        .auto-style2 {
+            font-size: 30pt;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+
+            <asp:Panel ID="Panel" runat="server">
+                <header id="header">
+                    <nav class="navbar navbar-default navbar-static-top" role="banner">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <div class="navbar-brand">
+                                    <a href="HomePage.aspx">
+                                        <h1><span class="auto-style2"><strong>論文審查系統</strong></span></h1>
+                                    </a>
+                                </div>
+                            </div>
+                             <asp:ContentPlaceHolder ID="navbar" runat="server">
+                            </asp:ContentPlaceHolder>
+                    </nav>
+                    <asp:Label ID="Label1" runat="server" CssClass="auto-style1" ForeColor="Black"></asp:Label>
+                </header>
+                <!-- Include all compiled plugins (below), or include individual files as needed -->
+                <script src="../js/bootstrap.min.js"></script>
+                <script src="../js/wow.min.js"></script>
+                <script>
+                    wow = new WOW(
+                        {
+
+                        })
+                        .init();
+                </script>
+
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">
+                </asp:ContentPlaceHolder>
+            </asp:Panel>
+
+        </div>
+    </form>
+
+    <footer>
+    </footer>
+</body>
+</html>
