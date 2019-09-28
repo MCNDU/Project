@@ -43,7 +43,7 @@ namespace Project._02_Web_Page
                     {
                         if (sdr.HasRows)
                         {
-
+                             
                             Session["Login"] = "OK";
                             sdr.Read();
                             Session["ID"] = sdr["ID"].ToString();
