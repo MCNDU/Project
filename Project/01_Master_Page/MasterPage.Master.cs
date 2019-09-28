@@ -12,6 +12,7 @@ namespace Project._01_Master_Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
             this.Panel.Height = Screen.PrimaryScreen.Bounds.Height - 205;
             if (Session["Login"] != null)
             {

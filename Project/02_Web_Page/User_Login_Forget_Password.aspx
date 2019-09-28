@@ -17,7 +17,7 @@
         </p>
 
         &nbsp;&nbsp;
-        <asp:Button ID="Enter_BTN" runat="server" ForeColor="Black" Text="確定" />
+        <asp:Button ID="Enter_BTN" runat="server" ForeColor="Black" Text="確定" OnClick="Send_Password" />
         <p>
             <asp:Label ID="Alert_LB" runat="server" ForeColor="Black"></asp:Label>
         </p>

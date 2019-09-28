@@ -101,10 +101,11 @@
             <asp:TextBox ID="Password_TBX" runat="server" CssClass="txtpass" required="請填寫密碼" placeholder="********" TextMode="Password" />
             <asp:Button ID="Login_BTN" Text="登入" CssClass="btnsubmit" runat="server" OnClick="Login" />
 
-            <asp:HyperLink ID="HyperLink1" Text="忘記密碼" CssClass="btnforget" runat="server" Target="_self" NavigateUrl="User_Login_Forget_Password.aspx" />
+            <asp:HyperLink ID="FrogetPassword_HL" Text="忘記密碼" CssClass="btnforget" runat="server" Target="_self" NavigateUrl="User_Login_Forget_Password.aspx" />
             
             <asp:Label ID="Alert_LB" runat="server"></asp:Label>
         </form>
+
     </div>
 </body>
 </html>

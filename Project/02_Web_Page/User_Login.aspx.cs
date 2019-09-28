@@ -61,9 +61,9 @@ namespace Project._02_Web_Page
                                 Response.Redirect("HomePage_Teacher.aspx");
                             }
 
-                            else if (sdr.GetValue(0).ToString() == "Committee")
+                            else if (sdr.GetValue(0).ToString() == "Admin")
                             {
-                                Response.Redirect("HomePage_Committee.aspx");
+                                Response.Redirect("HomePage_Admin.aspx");
                             }
 
                             else

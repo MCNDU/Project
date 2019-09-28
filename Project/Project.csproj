@@ -163,6 +163,13 @@
     <Compile Include="01_Master_Page\MasterPage_Student.master.designer.cs">
       <DependentUpon>MasterPage_Student.master</DependentUpon>
     </Compile>
+    <Compile Include="01_Master_Page\MasterPage_Teacher.master.cs">
+      <DependentUpon>MasterPage_Teacher.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="01_Master_Page\MasterPage_Teacher.master.designer.cs">
+      <DependentUpon>MasterPage_Teacher.master</DependentUpon>
+    </Compile>
     <Compile Include="02_Web_Page\Choose_AdvPro.aspx.cs">
       <DependentUpon>Choose_AdvPro.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -237,6 +244,7 @@
     <Content Include="01_Master_Page\MasterPage.Master" />
     <Content Include="01_Master_Page\MasterPage_Forget_Password.master" />
     <Content Include="01_Master_Page\MasterPage_Student.master" />
+    <Content Include="01_Master_Page\MasterPage_Teacher.master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
