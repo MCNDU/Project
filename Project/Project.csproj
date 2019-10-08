@@ -71,6 +71,8 @@
   <ItemGroup>
     <Content Include="02_Web_Page\Choose_AdvPro.aspx" />
     <Content Include="02_Web_Page\HomePage_Student.aspx" />
+    <Content Include="02_Web_Page\Manage_Account.aspx" />
+    <Content Include="02_Web_Page\PersonalInformation_Student.aspx" />
     <Content Include="02_Web_Page\Statistic_AdvPro.aspx" />
     <Content Include="02_Web_Page\Examine_Teacher.aspx" />
     <Content Include="02_Web_Page\User_Login.aspx" />
@@ -149,6 +151,13 @@
     <Compile Include="01_Master_Page\MasterPage.Master.designer.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
     </Compile>
+    <Compile Include="01_Master_Page\MasterPage_Admin.master.cs">
+      <DependentUpon>MasterPage_Admin.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="01_Master_Page\MasterPage_Admin.master.designer.cs">
+      <DependentUpon>MasterPage_Admin.master</DependentUpon>
+    </Compile>
     <Compile Include="01_Master_Page\MasterPage_Forget_Password.master.cs">
       <DependentUpon>MasterPage_Forget_Password.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -183,6 +192,20 @@
     </Compile>
     <Compile Include="02_Web_Page\HomePage_Student.aspx.designer.cs">
       <DependentUpon>HomePage_Student.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="02_Web_Page\Manage_Account.aspx.cs">
+      <DependentUpon>Manage_Account.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="02_Web_Page\Manage_Account.aspx.designer.cs">
+      <DependentUpon>Manage_Account.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="02_Web_Page\PersonalInformation_Student.aspx.cs">
+      <DependentUpon>PersonalInformation_Student.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="02_Web_Page\PersonalInformation_Student.aspx.designer.cs">
+      <DependentUpon>PersonalInformation_Student.aspx</DependentUpon>
     </Compile>
     <Compile Include="02_Web_Page\Statistic_AdvPro.aspx.cs">
       <DependentUpon>Statistic_AdvPro.aspx</DependentUpon>
@@ -245,6 +268,7 @@
     <Content Include="01_Master_Page\MasterPage_Forget_Password.master" />
     <Content Include="01_Master_Page\MasterPage_Student.master" />
     <Content Include="01_Master_Page\MasterPage_Teacher.master" />
+    <Content Include="01_Master_Page\MasterPage_Admin.master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

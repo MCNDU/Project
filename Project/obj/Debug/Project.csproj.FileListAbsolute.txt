@@ -105,7 +105,6 @@ D:\Visual Studio專案\存放庫\Project\Project\bin\roslyn\VBCSCompiler.exe
 D:\Visual Studio專案\存放庫\Project\Project\bin\roslyn\VBCSCompiler.exe.config
 D:\Visual Studio專案\存放庫\Project\Project\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\Visual Studio專案\存放庫\Project\Project\obj\Debug\Project.csprojAssemblyReference.cache
-D:\Visual Studio專案\存放庫\Project\Project\obj\Debug\Project.csproj.CoreCompileInputs.cache
 D:\Visual Studio專案\存放庫\Project\Project\obj\Debug\Project.csproj.CopyComplete
 D:\Visual Studio專案\存放庫\Project\Project\obj\Debug\Project.dll
 D:\Visual Studio專案\存放庫\Project\Project\obj\Debug\Project.pdb

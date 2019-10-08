@@ -49,7 +49,7 @@ namespace Project._02_Web_Page
                             Session["ID"] = sdr["ID"].ToString();
                             Session["Password"] = sdr["Password"].ToString();
                             Session["Email"] = sdr["Email"].ToString();
-                            Session["Chinese_name"] = sdr["Name"].ToString();
+                            Session["Chinese_Name"] = sdr["Chinese_Name"].ToString();
 
                             if (sdr.GetValue(0).ToString() == "Student")
                             {
@@ -63,7 +63,7 @@ namespace Project._02_Web_Page
 
                             else if (sdr.GetValue(0).ToString() == "Admin")
                             {
-                                Response.Redirect("HomePage_Admin.aspx");
+                                Response.Redirect("Manage_Account.aspx");
                             }
 
                             else
