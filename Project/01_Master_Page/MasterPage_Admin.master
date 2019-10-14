@@ -7,7 +7,7 @@
             <ul class="nav nav-tabs" role="tablist">
                 <li role="presentation"><a href="">個人資料</a></li>
 				<li role="presentation"><a href="Manage_Account.aspx">管理帳號資料</a></li>
-				<li role="presentation"><a href="">管理教授資料</a></li>
+				<li role="presentation"><a href="Manage_Professor.aspx">管理教授資料</a></li>
 				<li role="presentation"><a href="">管理研究生資料</a></li>
                 <li role="presentation"><a href="User_Login.aspx">登出</a></li>
             </ul>

@@ -72,6 +72,7 @@
     <Content Include="02_Web_Page\Choose_AdvPro.aspx" />
     <Content Include="02_Web_Page\HomePage_Student.aspx" />
     <Content Include="02_Web_Page\Manage_Account.aspx" />
+    <Content Include="02_Web_Page\Manage_Professor.aspx" />
     <Content Include="02_Web_Page\PersonalInformation_Student.aspx" />
     <Content Include="02_Web_Page\Statistic_AdvPro.aspx" />
     <Content Include="02_Web_Page\Examine_Teacher.aspx" />
@@ -199,6 +200,13 @@
     </Compile>
     <Compile Include="02_Web_Page\Manage_Account.aspx.designer.cs">
       <DependentUpon>Manage_Account.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="02_Web_Page\Manage_Professor.aspx.cs">
+      <DependentUpon>Manage_Professor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="02_Web_Page\Manage_Professor.aspx.designer.cs">
+      <DependentUpon>Manage_Professor.aspx</DependentUpon>
     </Compile>
     <Compile Include="02_Web_Page\PersonalInformation_Student.aspx.cs">
       <DependentUpon>PersonalInformation_Student.aspx</DependentUpon>

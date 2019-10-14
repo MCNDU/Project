@@ -15,7 +15,7 @@ namespace Project._02_Web_Page
         }
 
         //傳送所選資料至DetailsView並提供修改功能
-        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        protected void GridView_List_SelectedIndexChanged(object sender, EventArgs e)
         {
             int C;
 
