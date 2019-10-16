@@ -69,7 +69,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="02_Web_Page\Choose_AdvPro.aspx" />
     <Content Include="02_Web_Page\Choose_Professor.aspx" />
     <Content Include="02_Web_Page\HomePage_Student.aspx" />
     <Content Include="02_Web_Page\Manage_Account.aspx" />
@@ -180,13 +179,6 @@
     </Compile>
     <Compile Include="01_Master_Page\MasterPage_Teacher.master.designer.cs">
       <DependentUpon>MasterPage_Teacher.master</DependentUpon>
-    </Compile>
-    <Compile Include="02_Web_Page\Choose_AdvPro.aspx.cs">
-      <DependentUpon>Choose_AdvPro.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="02_Web_Page\Choose_AdvPro.aspx.designer.cs">
-      <DependentUpon>Choose_AdvPro.aspx</DependentUpon>
     </Compile>
     <Compile Include="02_Web_Page\Choose_Professor.aspx.cs">
       <DependentUpon>Choose_Professor.aspx</DependentUpon>

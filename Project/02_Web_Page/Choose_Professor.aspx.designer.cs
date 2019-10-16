@@ -24,13 +24,13 @@ namespace Project._02_Web_Page
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
 
         /// <summary>
-        /// Choose_AdvPro_Here 控制項。
+        /// Table1 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Table Choose_AdvPro_Here;
+        protected global::System.Web.UI.WebControls.Table Table1;
 
         /// <summary>
         /// Choose_Adv_1 控制項。
@@ -330,13 +330,13 @@ namespace Project._02_Web_Page
         protected global::System.Web.UI.WebControls.Button Button2;
 
         /// <summary>
-        /// Title 控制項。
+        /// Choose_Title 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Table Title;
+        protected global::System.Web.UI.WebControls.Table Choose_Title;
 
         /// <summary>
         /// Select_AP_Table 控制項。
