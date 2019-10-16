@@ -26,6 +26,27 @@ namespace Project._02_Web_Page
             }
         }
 
+        protected void Incert_Mode(object sender, EventArgs e)
+        {
+            if (DetailsView_Edit.CurrentMode == DetailsViewMode.Insert)
+            {
+                DetailsView_Edit.Fields.RemoveAt(0);
 
+                
+                
+                ListItem Admin = new ListItem();
+                ListItem Teacher = new ListItem();
+                ListItem Student = new ListItem();
+
+                DropDownList Category = new DropDownList();
+                Category.Items.Add(Admin);
+                Category.Items.Add(Teacher);
+                Category.Items.Add(Student);
+
+                TemplateField incert = new TemplateField();
+
+                DetailsView_Edit.Fields.Insert(0, incert);
+            }
+        }
     }
 }

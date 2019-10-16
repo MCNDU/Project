@@ -9,12 +9,12 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:Table ID="Title" runat="server" HorizontalAlign="Center" Width="85%" OnLoad="Title_Load">
-                <asp:TableRow>
-                    <asp:TableCell HorizontalAlign="Center"></asp:TableCell>
-                </asp:TableRow>
-            </asp:Table>
-            <asp:GridView ID="GridView1" runat="server" HorizontalAlign="Center" AutoGenerateColumns="False">
+            <table ID="Title" runat="server" style="text-align: center" Width="85%" OnLoad="Title_Load">
+                <tr>
+                    <td style="text-align: center"></td>
+                </tr>
+            </table>
+            <asp:GridView ID="GridView1" runat="server" style="text-align: center" AutoGenerateColumns="False">
                 <Columns>
                     <asp:BoundField HeaderText="項次">
                     <ControlStyle Width="50px" />

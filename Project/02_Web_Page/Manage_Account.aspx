@@ -4,9 +4,11 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
 
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Project_Db %>" SelectCommand="SELECT * FROM [User_Login]" UpdateCommand="UPDATE [User_Login] SET [Password] = @Password, [Email] = @Email, [Chinese_Name] = @Chinese_Name, [English_Name] = @English_Name, [Phone] = @Phone WHERE [ID] = @ID"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Project_Db %>" SelectCommand="SELECT * FROM [User_Login]" 
+        UpdateCommand="UPDATE [User_Login] SET [Password] = @Password, [Email] = @Email, [Chinese_Name] = @Chinese_Name, [English_Name] = @English_Name, [Phone] = @Phone WHERE [ID] = @ID"
+        InsertCommand="INSERT INTO User_Login(Category, Chinese_Name, English_Name, ID, Password, Email, Phone) VALUES (@Category, @Chinese_Name, @English_Name, @ID, @Password, @Email, @Phone)"></asp:SqlDataSource>
 
-    <asp:DetailsView ID="DetailsView_Edit" runat="server" AutoGenerateRows="False" CellPadding="4" DataKeyNames="ID" DataSourceID="SqlDataSource1" ForeColor="Black" Height="252px" Width="550px" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellSpacing="2" CssClass="auto-style1">
+    <asp:DetailsView ID="DetailsView_Edit" runat="server" AutoGenerateRows="False" CellPadding="4" DataKeyNames="ID" DataSourceID="SqlDataSource1" ForeColor="Black" Height="252px" Width="550px" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellSpacing="2" CssClass="auto-style1" OnModeChanged="Incert_Mode">
         <EditRowStyle BackColor="White" Font-Bold="True" ForeColor="Black" />
         <Fields>
             <asp:BoundField DataField="Category" HeaderText="權限" SortExpression="Category" />
@@ -16,7 +18,16 @@
             <asp:BoundField DataField="Password" HeaderText="密碼" SortExpression="Password" />
             <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
             <asp:BoundField DataField="Phone" HeaderText="電話號碼" SortExpression="Phone" />
-            <asp:CommandField ShowEditButton="True" />
+            <asp:TemplateField HeaderText="test">
+                <ItemTemplate>
+                    <asp:DropDownList ID="DropDownList1" runat="server">
+                        <asp:ListItem Value="Student">學生</asp:ListItem>
+                        <asp:ListItem Value="Admin">管理員</asp:ListItem>
+                        <asp:ListItem Value="Teacher">指導教授</asp:ListItem>
+                    </asp:DropDownList>
+                </ItemTemplate>
+            </asp:TemplateField>
+            <asp:CommandField ShowEditButton="True" ShowInsertButton="True" />
         </Fields>
         <FooterStyle BackColor="#CCCCCC" />
         <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />

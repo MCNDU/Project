@@ -70,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="02_Web_Page\Choose_AdvPro.aspx" />
+    <Content Include="02_Web_Page\Choose_Professor.aspx" />
     <Content Include="02_Web_Page\HomePage_Student.aspx" />
     <Content Include="02_Web_Page\Manage_Account.aspx" />
     <Content Include="02_Web_Page\Manage_Professor.aspx" />
@@ -186,6 +187,13 @@
     </Compile>
     <Compile Include="02_Web_Page\Choose_AdvPro.aspx.designer.cs">
       <DependentUpon>Choose_AdvPro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="02_Web_Page\Choose_Professor.aspx.cs">
+      <DependentUpon>Choose_Professor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="02_Web_Page\Choose_Professor.aspx.designer.cs">
+      <DependentUpon>Choose_Professor.aspx</DependentUpon>
     </Compile>
     <Compile Include="02_Web_Page\HomePage_Student.aspx.cs">
       <DependentUpon>HomePage_Student.aspx</DependentUpon>
