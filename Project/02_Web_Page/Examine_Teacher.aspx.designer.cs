@@ -7,11 +7,13 @@
 // </自動產生的>
 //------------------------------------------------------------------------------
 
-namespace Project._02_Web_Page {
-    
-    
-    public partial class Examine_Teacher {
-        
+namespace Project._02_Web_Page
+{
+
+
+    public partial class Examine_Teacher
+    {
+
         /// <summary>
         /// form1 控制項。
         /// </summary>
@@ -20,16 +22,7 @@ namespace Project._02_Web_Page {
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
-        /// <summary>
-        /// Title 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected new global::System.Web.UI.WebControls.Table Title;
-        
+
         /// <summary>
         /// GridView1 控制項。
         /// </summary>
