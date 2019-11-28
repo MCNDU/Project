@@ -20,9 +20,6 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <style type="text/css">
-        .auto-style1 {
-            font-size: large;
-        }
         .auto-style2 {
             font-size: 30pt;
         }

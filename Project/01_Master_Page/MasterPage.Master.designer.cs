@@ -7,11 +7,13 @@
 // </自動產生的>
 //------------------------------------------------------------------------------
 
-namespace Project._01_Master_Page {
-    
-    
-    public partial class MasterPage {
-        
+namespace Project._01_Master_Page
+{
+
+
+    public partial class MasterPage
+    {
+
         /// <summary>
         /// head 控制項。
         /// </summary>
@@ -20,7 +22,7 @@ namespace Project._01_Master_Page {
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
-        
+
         /// <summary>
         /// form1 控制項。
         /// </summary>
@@ -29,7 +31,7 @@ namespace Project._01_Master_Page {
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
+
         /// <summary>
         /// Panel 控制項。
         /// </summary>
@@ -38,7 +40,7 @@ namespace Project._01_Master_Page {
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel Panel;
-        
+
         /// <summary>
         /// navbar 控制項。
         /// </summary>
@@ -47,7 +49,7 @@ namespace Project._01_Master_Page {
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder navbar;
-        
+
         /// <summary>
         /// Label1 控制項。
         /// </summary>
@@ -56,7 +58,7 @@ namespace Project._01_Master_Page {
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label1;
-        
+
         /// <summary>
         /// ContentPlaceHolder 控制項。
         /// </summary>

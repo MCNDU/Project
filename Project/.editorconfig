@@ -1,0 +1,10 @@
+﻿[*.cs]
+
+# CA1707: 識別項不應包含底線
+dotnet_diagnostic.CA1707.severity = none
+
+# CA1062: 必須驗證公用方法的引數
+dotnet_diagnostic.CA1062.severity = none
+
+# CA1305: 指定 IFormatProvider
+dotnet_diagnostic.CA1305.severity = none

@@ -7,11 +7,13 @@
 // </自動產生的>
 //------------------------------------------------------------------------------
 
-namespace Project._01_Master_Page {
-    
-    
-    public partial class MasterPage_Student {
-        
+namespace Project._01_Master_Page
+{
+
+
+    public partial class MasterPage_Student
+    {
+
         /// <summary>
         /// head 控制項。
         /// </summary>
@@ -20,7 +22,7 @@ namespace Project._01_Master_Page {
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
-        
+
         /// <summary>
         /// navbar 控制項。
         /// </summary>
@@ -29,7 +31,7 @@ namespace Project._01_Master_Page {
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder navbar;
-        
+
         /// <summary>
         /// ContentPlaceHolder 控制項。
         /// </summary>

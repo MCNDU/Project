@@ -41,7 +41,7 @@ namespace Project._02_Web_Page {
                 DataTable dt = ds.Tables["Choosen_One"];
 
                 String S = dt.Rows[0][2].ToString();
-                this.Title.Rows[0].Cells[0].Text = "國防大學管理學院資訊管理學系在職組" + S + "期論文計劃書審查成績冊";
+                //this.Title.Rows[0].Cells[0].Text = "國防大學管理學院資訊管理學系在職組" + S + "期論文計劃書審查成績冊";
             }
             Refresh_Data();
         }
