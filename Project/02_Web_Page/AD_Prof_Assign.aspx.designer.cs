@@ -22,40 +22,31 @@ namespace Project._02_Web_Page {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Data_MultiView 控制項。
+        /// Browse_Mode_LB 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.MultiView Data_MultiView;
+        protected global::System.Web.UI.WebControls.Label Browse_Mode_LB;
 
         /// <summary>
-        /// Student_Only_View 控制項。
+        /// Browse_Mode_DDL 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.View Student_Only_View;
+        protected global::System.Web.UI.WebControls.DropDownList Browse_Mode_DDL;
 
         /// <summary>
-        /// Button1 控制項。
+        /// Teacher_GV 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
-
-        /// <summary>
-        /// Button2 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.GridView Teacher_GV;
 
         /// <summary>
         /// Doc_Title_Forward 控制項。
@@ -92,114 +83,6 @@ namespace Project._02_Web_Page {
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView Student_GV;
-
-        /// <summary>
-        /// Teacher_Only_View 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.View Teacher_Only_View;
-
-        /// <summary>
-        /// Button3 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button3;
-
-        /// <summary>
-        /// Button4 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button4;
-
-        /// <summary>
-        /// Teacher_GV 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView Teacher_GV;
-
-        /// <summary>
-        /// Mix_View 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.View Mix_View;
-
-        /// <summary>
-        /// Button5 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button5;
-
-        /// <summary>
-        /// Button6 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button6;
-
-        /// <summary>
-        /// Teacher_GV_1 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView Teacher_GV_1;
-
-        /// <summary>
-        /// Doc_Title_Forward0 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Doc_Title_Forward0;
-
-        /// <summary>
-        /// Batch_DDL0 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList Batch_DDL0;
-
-        /// <summary>
-        /// Doc_Title__Backward0 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Doc_Title__Backward0;
-
-        /// <summary>
-        /// Student_GV_1 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView Student_GV_1;
 
         /// <summary>
         /// Title_Student_LB 控制項。
@@ -256,21 +139,39 @@ namespace Project._02_Web_Page {
         protected global::System.Web.UI.WebControls.SqlDataSource Batch;
 
         /// <summary>
-        /// Teacher_SDS 控制項。
+        /// Student_SDS_ForGV 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource Teacher_SDS;
+        protected global::System.Web.UI.WebControls.SqlDataSource Student_SDS_ForGV;
 
         /// <summary>
-        /// Student_SDS 控制項。
+        /// Student_SDS_ForDV 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource Student_SDS;
+        protected global::System.Web.UI.WebControls.SqlDataSource Student_SDS_ForDV;
+
+        /// <summary>
+        /// Teacher_SDS_ForGV 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource Teacher_SDS_ForGV;
+
+        /// <summary>
+        /// Teacher_SDS_ForDV 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource Teacher_SDS_ForDV;
     }
 }
