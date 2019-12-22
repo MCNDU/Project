@@ -16,7 +16,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <StartPageUrl>02_Web_Page/Choose_Professor.aspx</StartPageUrl>
+          <StartPageUrl>01_Administrator/AD_Prof_Assign.aspx</StartPageUrl>
           <StartAction>SpecificPage</StartAction>
           <AspNetDebugging>True</AspNetDebugging>
           <SilverlightDebugging>False</SilverlightDebugging>

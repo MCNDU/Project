@@ -1,0 +1,22 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/01_Master_Page/MasterPage.Master" AutoEventWireup="true" CodeBehind="MasterPage_Admin.master.cs" Inherits="Project._01_Master_Page.MasterPage_Admin" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="navbar" runat="server">
+    <div class="navbar-collapse collapse">
+        <div class="menu">
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation"><a href="">個人資料</a></li>
+				<li role="presentation"><a href="Manage_Account.aspx">管理帳號資料</a></li>
+				<li role="presentation"><a href="Manage_Professor.aspx">管理教授資料</a></li>
+				<li role="presentation"><a href="">管理研究生資料</a></li>
+                <li role="presentation"><a href="User_Login.aspx">登出</a></li>
+            </ul>
+        </div>
+    </div>
+    <asp:ContentPlaceHolder ID="navbar" runat="server">
+                            </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>

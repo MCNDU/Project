@@ -30,7 +30,7 @@
     <form id="ContentForm" runat="server">
         <div>
             <!-- 網頁上半部分(含標題、內容頁面) -->
-            <asp:Panel ID="ContentPanel" runat="server" Width="100%">
+            <asp:Panel ID="ContentPanel" runat="server" Width="100%" ForeColor="Black">
                 <!-- 藍色標題 + 右上選單 -->
                 <header id="header">
                     <nav class="navbar navbar-default navbar-static-top" role="banner">
@@ -61,8 +61,8 @@
                         .init();
                 </script>
 
-                <!-- 此模板套用後，各網頁內容將會置放此處 -->
-                <asp:ContentPlaceHolder ID="WebContent" runat="server">
+                <asp:ContentPlaceHolder ID="MasterWebContent" runat="server">
+                    <!-- 此模板套用後，各網頁內容將會置放此處 -->
                 </asp:ContentPlaceHolder>
             </asp:Panel>
         </div>
