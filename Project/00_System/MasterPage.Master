@@ -1,0 +1,75 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="Project._00_System.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+
+    <title>線上論文審查系統</title>
+
+    <!-- [!] 因不確定影響為何，不做更動 -->
+    <!-- 載入Bootstrap -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="../css/animate.min.css">
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <!-- 用於下方「論文審查系統」標題之css設定 -->
+    <style type="text/css">
+        .auto-style2 {
+            font-size: 30pt;
+        }
+    </style>
+
+</head>
+<body>
+    <form id="ContentForm" runat="server">
+        <div>
+            <!-- 網頁上半部分(含標題、內容頁面) -->
+            <asp:Panel ID="ContentPanel" runat="server" Width="100%">
+                <!-- 藍色標題 + 右上選單 -->
+                <header id="header">
+                    <nav class="navbar navbar-default navbar-static-top" role="banner">
+                        <!-- 藍色標題(用作回登入頁面之超連結) -->
+                        <div class="navbar-header">
+                            <div class="navbar-brand">
+                                <a href="User_Login.aspx">
+                                    <h1><span class="auto-style2"><strong>論文審查系統</strong></span></h1>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 右上角選單(此模板套用後，可針對使用者身分訂定選單) -->
+                        <asp:ContentPlaceHolder ID="navbar" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </nav>
+                    <asp:Label ID="Label1" runat="server" CssClass="auto-style1" ForeColor="Black"></asp:Label>
+                </header>
+                <!-- 上一部分用到的js檔 -->
+                <!-- [!] 因不確定影響為何，不做更動 -->
+                <!-- Include all compiled plugins (below), or include individual files as needed -->
+                <script src="../js/bootstrap.min.js"></script>
+                <script src="../js/wow.min.js"></script>
+                <script>
+                    wow = new WOW(
+                        {
+
+                        })
+                        .init();
+                </script>
+
+                <!-- 此模板套用後，各網頁內容將會置放此處 -->
+                <asp:ContentPlaceHolder ID="WebContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </asp:Panel>
+        </div>
+    </form>
+
+    <!-- 網頁底下的藍色橫條 -->
+    <footer>
+    </footer>
+</body>
+</html>

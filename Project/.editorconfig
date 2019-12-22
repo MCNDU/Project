@@ -8,3 +8,6 @@ dotnet_diagnostic.CA1062.severity = none
 
 # CA1305: 指定 IFormatProvider
 dotnet_diagnostic.CA1305.severity = none
+
+# CA5368: 設定頁面衍生類別的 ViewStateUserKey
+dotnet_diagnostic.CA5368.severity = none

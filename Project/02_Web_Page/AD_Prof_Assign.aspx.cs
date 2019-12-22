@@ -56,6 +56,7 @@ namespace Project._02_Web_Page {
             int Col_Count;
             string Data_Value;
 
+            //
             while (Row_Count < ST_DataRow) {
                 for (Col_Count = 6; Col_Count <= 8; Col_Count++) {
                     Data_Value = Student_GV.Rows[Row_Count].Cells[Col_Count].ToString();
