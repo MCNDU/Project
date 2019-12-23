@@ -75,7 +75,6 @@
     <Content Include="00_System\Description.txt" />
     <Content Include="01_Administrator\AD_Prof_Assign.aspx" />
     <Content Include="01_Administrator\Description.txt" />
-    <Content Include="01_Administrator\WebForm1.aspx" />
     <Content Include="待轉移\02_Web_Page\AD_Prof_Assign.aspx" />
     <Content Include="待轉移\02_Web_Page\Choose_Professor.aspx" />
     <Content Include="待轉移\02_Web_Page\HomePage_Student.aspx" />
@@ -172,13 +171,6 @@
     </Compile>
     <Compile Include="01_Administrator\AD_Prof_Assign.aspx.designer.cs">
       <DependentUpon>AD_Prof_Assign.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="01_Administrator\WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="01_Administrator\WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
     <Compile Include="待轉移\01_Master_Page\MasterPage.Master.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>

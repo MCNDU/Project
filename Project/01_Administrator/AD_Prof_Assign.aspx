@@ -9,7 +9,7 @@
     </head>
     <body>
         <div>
-            <table style="width: 100%; vertical-align: top;" id="table">
+            <table style="width: 100%; vertical-align: top; height: 100%;" id="table">
                 <tr>
                     <td style="border-style: solid; vertical-align: top; width: 75%;">
                         <asp:Label ID="Browse_Mode_LB" runat="server" Text="瀏覽模式"></asp:Label>
@@ -104,12 +104,9 @@
                 </tr>
             </table>
             <asp:SqlDataSource ID="Batch" runat="server" ConnectionString="<%$ ConnectionStrings:Project_Db %>" SelectCommand="SELECT DISTINCT [Batch] FROM [Student]"></asp:SqlDataSource>
-
             <asp:SqlDataSource ID="Student_SDS_ForGV" runat="server" ConnectionString="<%$ ConnectionStrings:Project_Db %>" SelectCommand="SELECT * FROM [Student]"></asp:SqlDataSource>
-
             <asp:SqlDataSource ID="Student_SDS_ForDV" runat="server" ConnectionString="<%$ ConnectionStrings:Project_Db %>" SelectCommand="SELECT [ID], [Name], [Ch_Title], [First_Commit], [Second_Commit], [Third_Commit], [First_Prof] FROM [Student]"></asp:SqlDataSource>
             <asp:SqlDataSource ID="Teacher_SDS_ForGV" runat="server" ConnectionString="<%$ ConnectionStrings:Project_Db %>" SelectCommand="SELECT * FROM [Teacher] , [ExamPoint_Log] WHERE Batch = 0;"></asp:SqlDataSource>
-
             <asp:SqlDataSource ID="Teacher_SDS_ForDV" runat="server" ConnectionString="<%$ ConnectionStrings:Project_Db %>" SelectCommand="SELECT * FROM [Teacher] , [ExamPoint_Log] WHERE Batch = 0;"></asp:SqlDataSource>
 
         </div>
