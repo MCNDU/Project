@@ -1,0 +1,6 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/00_System/MasterPage.Master" AutoEventWireup="true" CodeBehind="ST_MasterPage.master.cs" Inherits="Project._03_Student.ST_MasterPage" %>
+<asp:Content ID="ST_navbar" ContentPlaceHolderID="navbar" runat="server">
+</asp:Content>
+<asp:Content ID="ST_MasterWebContent" ContentPlaceHolderID="MasterWebContent" runat="server">
+    <asp:ContentPlaceHolder ID="WebContent" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>

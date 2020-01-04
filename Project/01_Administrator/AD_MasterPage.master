@@ -1,18 +1,6 @@
 ﻿<%@ Master Language="C#" MasterPageFile="~/00_System/MasterPage.Master" AutoEventWireup="true" CodeBehind="AD_MasterPage.master.cs" Inherits="Project._01_Administrator.AD_MasterPage" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="navbar" runat="server">
-    <div class="navbar-collapse collapse">
-        <div class="menu">
-            <ul class="nav nav-tabs" role="tablist">
-                <li role="presentation"><a href=""></a></li>
-				<li role="presentation"><a href=""></a></li>
-				<li role="presentation"><a href=""></a></li>
-				<li role="presentation"><a href=""></a></li>
-                <li role="presentation"><a href="User_Login.aspx">登出</a></li>
-            </ul>
-        </div>
-    </div>
+<asp:Content ID="AD_navbar" ContentPlaceHolderID="navbar" runat="server">
 </asp:Content>
-<asp:Content ID="MasterWebContent" ContentPlaceHolderID="MasterWebContent" runat="server">
-    <asp:ContentPlaceHolder ID="WebContent" runat="server">
-    </asp:ContentPlaceHolder>
+<asp:Content ID="AD_MasterWebContent" ContentPlaceHolderID="MasterWebContent" runat="server">
+    <asp:ContentPlaceHolder ID="WebContent" runat="server"></asp:ContentPlaceHolder>
 </asp:Content>

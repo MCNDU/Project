@@ -1,0 +1,15 @@
+﻿與管理員有關的網頁將會放置於此資料夾
+
+AD_MasterPage.master
+檔名前綴AD之網頁所套用的模板
+繼承MasterPage.Master的模板
+
+AD_Prof_Assign
+管理員可在此頁面分配指導教授
+分配流程：系統自動 -> 管理員手動
+
+AD_Manage_Account
+管理員可在此新增、編輯、刪除所有使用者之帳號資料
+
+AD_Managr_Prof
+管理員可在此新增、編輯、刪除指導教授的詳細資料

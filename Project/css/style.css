@@ -130,9 +130,10 @@ a:hover {
 .navbar-default {
 	background-color: #65AAF0;
 	border-color:#65AAF0;
-    top: 0px;
+    top: 1px;
     left: 0px;
-    height: 79px;
+    height: 90px;
+    width: 1644px;
 }
 
 /*===========================
@@ -938,7 +939,7 @@ textarea#message{
 footer {
 	padding:50px;
 	background:#65AAF0;
-    height: 1px;
+    height: 0px;
 }
 
 footer p {

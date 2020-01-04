@@ -3,12 +3,7 @@
 <!DOCTYPE html>
 
 <html>
-<head runat="server">
-    <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width">
-
-    <title>線上論文審查系統</title>
+<head runat="server"><meta http-equiv="Content-Type" content="text/html" charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width"><title>線上論文審查系統</title>
 
     <!-- [!] 因不確定影響為何，不做更動 -->
     <!-- 載入Bootstrap -->
@@ -29,7 +24,7 @@
 <body>
     <form id="ContentForm" runat="server">
         <div>
-            <!-- 網頁上半部分(含標題、內容頁面) -->
+            !-- 網頁上半部分(含標題、內容頁面) -->
             <asp:Panel ID="ContentPanel" runat="server" Width="100%" ForeColor="Black">
                 <!-- 藍色標題 + 右上選單 -->
                 <header id="header">
@@ -60,16 +55,14 @@
                         })
                         .init();
                 </script>
-
-                <asp:ContentPlaceHolder ID="MasterWebContent" runat="server">
-                    <!-- 此模板套用後，各網頁內容將會置放此處 -->
-                </asp:ContentPlaceHolder>
+                    <asp:ContentPlaceHolder ID="MasterWebContent" runat="server">
+                        <!-- 此模板套用後，各網頁內容將會置放此處 -->
+                    </asp:ContentPlaceHolder>
             </asp:Panel>
         </div>
     </form>
-
     <!-- 網頁底下的藍色橫條 -->
-    <footer>
+    <footer style="vertical-align: bottom">
     </footer>
 </body>
 </html>

@@ -1,6 +1,0 @@
-﻿與管理員有關的網頁將會放置於此資料夾
-
-AD_MasterPage.master
-檔名前綴AD之網頁所套用的模板
-繼承MasterPage.Master的模板
-

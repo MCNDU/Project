@@ -1,0 +1,11 @@
+﻿與研究生有關的網頁將會放置於此資料夾
+
+ST_MasterPage
+檔名前綴ST之網頁所套用的模板
+繼承MasterPage.Master的模板
+
+ST_Choose_Prof
+研究生可在此申請指導老師
+
+ST_PersonalInfo
+研究生可在此瀏覽及修改個人資料(含密碼)

@@ -72,19 +72,19 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="00_System\Description.txt" />
+    <Content Include="00_System\00_Description.txt" />
+    <Content Include="00_System\User_Login.aspx" />
+    <Content Include="00_System\User_Login_Forget_Password.aspx" />
+    <Content Include="01_Administrator\AD_Examine_List.aspx" />
+    <Content Include="01_Administrator\AD_Manage_Account.aspx" />
+    <Content Include="01_Administrator\AD_Manage_Prof.aspx" />
     <Content Include="01_Administrator\AD_Prof_Assign.aspx" />
-    <Content Include="01_Administrator\Description.txt" />
-    <Content Include="待轉移\02_Web_Page\AD_Prof_Assign.aspx" />
-    <Content Include="待轉移\02_Web_Page\Choose_Professor.aspx" />
-    <Content Include="待轉移\02_Web_Page\HomePage_Student.aspx" />
-    <Content Include="待轉移\02_Web_Page\Manage_Account.aspx" />
-    <Content Include="待轉移\02_Web_Page\Manage_Professor.aspx" />
-    <Content Include="待轉移\02_Web_Page\PersonalInformation_Student.aspx" />
-    <Content Include="待轉移\02_Web_Page\Examine_Teacher.aspx" />
-    <Content Include="待轉移\02_Web_Page\User_Login.aspx" />
-    <Content Include="待轉移\02_Web_Page\User_Login_Forget_Password.aspx" />
-    <Content Include="待轉移\03_Sample\AD_Prof_Assign_Brch_Fuc.aspx" />
+    <Content Include="01_Administrator\01_Description.txt" />
+    <Content Include="99_Sample\AD_Prof_Assign_Brch_Fuc.aspx" />
+    <Content Include="03_Student\03_Disciption.txt" />
+    <Content Include="03_Student\ST_Choose_Prof.aspx" />
+    <Content Include="03_Student\ST_Personalnfo.aspx" />
+    <Content Include="99_Sample\99_Description.txt" />
     <Content Include="App_Data\Project_Db.mdf" />
     <Content Include="App_Data\Project_Db_log.ldf">
       <DependentUpon>Project_Db.mdf</DependentUpon>
@@ -158,6 +158,41 @@
     <Compile Include="00_System\MasterPage.Master.designer.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
     </Compile>
+    <Compile Include="00_System\User_Login.aspx.cs">
+      <DependentUpon>User_Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="00_System\User_Login.aspx.designer.cs">
+      <DependentUpon>User_Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="00_System\User_Login_Forget_Password.aspx.cs">
+      <DependentUpon>User_Login_Forget_Password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="00_System\User_Login_Forget_Password.aspx.designer.cs">
+      <DependentUpon>User_Login_Forget_Password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="01_Administrator\AD_Examine_List.aspx.cs">
+      <DependentUpon>AD_Examine_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="01_Administrator\AD_Examine_List.aspx.designer.cs">
+      <DependentUpon>AD_Examine_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="01_Administrator\AD_Manage_Account.aspx.cs">
+      <DependentUpon>AD_Manage_Account.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="01_Administrator\AD_Manage_Account.aspx.designer.cs">
+      <DependentUpon>AD_Manage_Account.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="01_Administrator\AD_Manage_Prof.aspx.cs">
+      <DependentUpon>AD_Manage_Prof.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="01_Administrator\AD_Manage_Prof.aspx.designer.cs">
+      <DependentUpon>AD_Manage_Prof.aspx</DependentUpon>
+    </Compile>
     <Compile Include="01_Administrator\AD_MasterPage.master.cs">
       <DependentUpon>AD_MasterPage.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -172,110 +207,33 @@
     <Compile Include="01_Administrator\AD_Prof_Assign.aspx.designer.cs">
       <DependentUpon>AD_Prof_Assign.aspx</DependentUpon>
     </Compile>
-    <Compile Include="待轉移\01_Master_Page\MasterPage.Master.cs">
-      <DependentUpon>MasterPage.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="待轉移\01_Master_Page\MasterPage.Master.designer.cs">
-      <DependentUpon>MasterPage.Master</DependentUpon>
-    </Compile>
-    <Compile Include="待轉移\01_Master_Page\MasterPage_Admin.master.cs">
-      <DependentUpon>MasterPage_Admin.master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="待轉移\01_Master_Page\MasterPage_Admin.master.designer.cs">
-      <DependentUpon>MasterPage_Admin.master</DependentUpon>
-    </Compile>
-    <Compile Include="待轉移\01_Master_Page\MasterPage_Forget_Password.master.cs">
-      <DependentUpon>MasterPage_Forget_Password.master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="待轉移\01_Master_Page\MasterPage_Forget_Password.master.designer.cs">
-      <DependentUpon>MasterPage_Forget_Password.master</DependentUpon>
-    </Compile>
-    <Compile Include="待轉移\01_Master_Page\MasterPage_Student.master.cs">
-      <DependentUpon>MasterPage_Student.master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="待轉移\01_Master_Page\MasterPage_Student.master.designer.cs">
-      <DependentUpon>MasterPage_Student.master</DependentUpon>
-    </Compile>
-    <Compile Include="待轉移\01_Master_Page\MasterPage_Teacher.master.cs">
-      <DependentUpon>MasterPage_Teacher.master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="待轉移\01_Master_Page\MasterPage_Teacher.master.designer.cs">
-      <DependentUpon>MasterPage_Teacher.master</DependentUpon>
-    </Compile>
-    <Compile Include="待轉移\02_Web_Page\AD_Prof_Assign.aspx.cs">
-      <DependentUpon>AD_Prof_Assign.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="待轉移\02_Web_Page\AD_Prof_Assign.aspx.designer.cs">
-      <DependentUpon>AD_Prof_Assign.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="待轉移\02_Web_Page\Choose_Professor.aspx.cs">
-      <DependentUpon>Choose_Professor.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="待轉移\02_Web_Page\Choose_Professor.aspx.designer.cs">
-      <DependentUpon>Choose_Professor.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="待轉移\02_Web_Page\HomePage_Student.aspx.cs">
-      <DependentUpon>HomePage_Student.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="待轉移\02_Web_Page\HomePage_Student.aspx.designer.cs">
-      <DependentUpon>HomePage_Student.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="待轉移\02_Web_Page\Manage_Account.aspx.cs">
-      <DependentUpon>Manage_Account.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="待轉移\02_Web_Page\Manage_Account.aspx.designer.cs">
-      <DependentUpon>Manage_Account.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="待轉移\02_Web_Page\Manage_Professor.aspx.cs">
-      <DependentUpon>Manage_Professor.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="待轉移\02_Web_Page\Manage_Professor.aspx.designer.cs">
-      <DependentUpon>Manage_Professor.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="待轉移\02_Web_Page\PersonalInformation_Student.aspx.cs">
-      <DependentUpon>PersonalInformation_Student.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="待轉移\02_Web_Page\PersonalInformation_Student.aspx.designer.cs">
-      <DependentUpon>PersonalInformation_Student.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="待轉移\02_Web_Page\Examine_Teacher.aspx.cs">
-      <DependentUpon>Examine_Teacher.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="待轉移\02_Web_Page\Examine_Teacher.aspx.designer.cs">
-      <DependentUpon>Examine_Teacher.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="待轉移\02_Web_Page\User_Login.aspx.cs">
-      <DependentUpon>User_Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="待轉移\02_Web_Page\User_Login.aspx.designer.cs">
-      <DependentUpon>User_Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="待轉移\02_Web_Page\User_Login_Forget_Password.aspx.cs">
-      <DependentUpon>User_Login_Forget_Password.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="待轉移\02_Web_Page\User_Login_Forget_Password.aspx.designer.cs">
-      <DependentUpon>User_Login_Forget_Password.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="待轉移\03_Sample\AD_Prof_Assign_Brch_Fuc.aspx.cs">
+    <Compile Include="99_Sample\AD_Prof_Assign_Brch_Fuc.aspx.cs">
       <DependentUpon>AD_Prof_Assign_Brch_Fuc.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="待轉移\03_Sample\AD_Prof_Assign_Brch_Fuc.aspx.designer.cs">
+    <Compile Include="99_Sample\AD_Prof_Assign_Brch_Fuc.aspx.designer.cs">
       <DependentUpon>AD_Prof_Assign_Brch_Fuc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="03_Student\ST_Choose_Prof.aspx.cs">
+      <DependentUpon>ST_Choose_Prof.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="03_Student\ST_Choose_Prof.aspx.designer.cs">
+      <DependentUpon>ST_Choose_Prof.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="03_Student\ST_MasterPage.master.cs">
+      <DependentUpon>ST_MasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="03_Student\ST_MasterPage.master.designer.cs">
+      <DependentUpon>ST_MasterPage.master</DependentUpon>
+    </Compile>
+    <Compile Include="03_Student\ST_Personalnfo.aspx.cs">
+      <DependentUpon>ST_Personalnfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="03_Student\ST_Personalnfo.aspx.designer.cs">
+      <DependentUpon>ST_Personalnfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -306,14 +264,10 @@
     <Content Include="obj\Debug\Project.csprojAssemblyReference.cache" />
     <Content Include="obj\Release\Project.csproj.CoreCompileInputs.cache" />
     <Content Include="obj\Release\Project.csprojAssemblyReference.cache" />
-    <Content Include="待轉移\01_Master_Page\MasterPage.Master" />
-    <Content Include="待轉移\01_Master_Page\MasterPage_Forget_Password.master" />
-    <Content Include="待轉移\01_Master_Page\MasterPage_Student.master" />
-    <Content Include="待轉移\01_Master_Page\MasterPage_Teacher.master" />
-    <Content Include="待轉移\01_Master_Page\MasterPage_Admin.master" />
     <Content Include=".editorconfig" />
     <Content Include="00_System\MasterPage.Master" />
     <Content Include="01_Administrator\AD_MasterPage.master" />
+    <Content Include="03_Student\ST_MasterPage.master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -323,6 +277,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="02_Professor\" />
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <ItemGroup>
