@@ -8,7 +8,7 @@
                 <asp:Label ID="Browse_Mode_LB" runat="server" Text="瀏覽模式"></asp:Label>
                 <asp:DropDownList ID="Browse_Mode_DDL" runat="server">
                 </asp:DropDownList>
-                <asp:GridView ID="Teacher_GV" runat="server" AutoGenerateColumns="False" DataKeyNames="ID,ID1" DataSourceID="Teacher_SDS_ForGV" PageSize="15" ShowHeaderWhenEmpty="True" Width="100%" Height="25%">
+                <asp:GridView ID="Teacher_GV" runat="server" AutoGenerateColumns="False" DataKeyNames="ID,ID1" PageSize="15" ShowHeaderWhenEmpty="True" Width="100%" Height="25%">
                     <Columns>
                         <asp:BoundField DataField="ID" HeaderText="教師編號" ReadOnly="True" SortExpression="ID" />
                         <asp:BoundField DataField="Name" HeaderText="姓名" SortExpression="Name" />
@@ -21,7 +21,7 @@
                     <asp:ListItem>請選擇指導教授</asp:ListItem>
                 </asp:DropDownList>
                 <asp:Label ID="Doc_Title__Backward" runat="server" Text="期論文計畫書審查成績冊"></asp:Label>
-                <asp:GridView ID="Student_GV" runat="server" AutoGenerateColumns="False" DataKeyNames="ID" DataSourceID="Student_SDS_ForGV" PageSize="25" ShowHeaderWhenEmpty="True" Width="100%" AutoGenerateSelectButton="True" OnSelectedIndexChanged="Student_GV_SelectedIndexChanged">
+                <asp:GridView ID="Student_GV" runat="server" AutoGenerateColumns="False" DataKeyNames="ID" PageSize="25" ShowHeaderWhenEmpty="True" Width="100%" AutoGenerateSelectButton="True" OnSelectedIndexChanged="Student_GV_SelectedIndexChanged">
                     <Columns>
                         <asp:TemplateField HeaderText="項次"></asp:TemplateField>
                         <asp:BoundField DataField="ID" HeaderText="學號" ReadOnly="True" SortExpression="ID" />
@@ -94,8 +94,6 @@
         </tr>
     </table>
     <asp:SqlDataSource ID="Batch" runat="server" ConnectionString="<%$ ConnectionStrings:Project_Db %>" SelectCommand="SELECT DISTINCT [Batch] FROM [Student]"></asp:SqlDataSource>
-    <asp:SqlDataSource ID="Student_SDS_ForGV" runat="server" ConnectionString="<%$ ConnectionStrings:Project_Db %>" SelectCommand="SELECT * FROM [Student]"></asp:SqlDataSource>
     <asp:SqlDataSource ID="Student_SDS_ForDV" runat="server" ConnectionString="<%$ ConnectionStrings:Project_Db %>" SelectCommand="SELECT [ID], [Name], [Ch_Title], [First_Commit], [Second_Commit], [Third_Commit], [First_Prof] FROM [Student]"></asp:SqlDataSource>
-    <asp:SqlDataSource ID="Teacher_SDS_ForGV" runat="server" ConnectionString="<%$ ConnectionStrings:Project_Db %>" SelectCommand="SELECT * FROM [Teacher] , [ExamPoint_Log] WHERE Batch = 0;"></asp:SqlDataSource>
     <asp:SqlDataSource ID="Teacher_SDS_ForDV" runat="server" ConnectionString="<%$ ConnectionStrings:Project_Db %>" SelectCommand="SELECT * FROM [Teacher] , [ExamPoint_Log] WHERE Batch = 0;"></asp:SqlDataSource>
 </asp:Content>
