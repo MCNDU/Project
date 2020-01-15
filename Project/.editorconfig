@@ -17,3 +17,6 @@ dotnet_diagnostic.CA2000.severity = none
 
 # CA2100: 必須檢閱 SQL 查詢中是否有安全性弱點
 dotnet_diagnostic.CA2100.severity = none
+
+# CA1716: 識別項不應該與關鍵字相符
+dotnet_diagnostic.CA1716.severity = none

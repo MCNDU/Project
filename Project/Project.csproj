@@ -80,11 +80,9 @@
     <Content Include="01_Administrator\AD_Manage_Prof.aspx" />
     <Content Include="01_Administrator\AD_Prof_Assign.aspx" />
     <Content Include="01_Administrator\01_Description.txt" />
-    <Content Include="99_Sample\AD_Prof_Assign_Brch_Fuc.aspx" />
     <Content Include="03_Student\03_Disciption.txt" />
     <Content Include="03_Student\ST_Choose_Prof.aspx" />
     <Content Include="03_Student\ST_Personalnfo.aspx" />
-    <Content Include="99_Sample\99_Description.txt" />
     <Content Include="App_Data\Project_Db.mdf" />
     <Content Include="App_Data\Project_Db_log.ldf">
       <DependentUpon>Project_Db.mdf</DependentUpon>
@@ -206,13 +204,6 @@
     </Compile>
     <Compile Include="01_Administrator\AD_Prof_Assign.aspx.designer.cs">
       <DependentUpon>AD_Prof_Assign.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="99_Sample\AD_Prof_Assign_Brch_Fuc.aspx.cs">
-      <DependentUpon>AD_Prof_Assign_Brch_Fuc.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="99_Sample\AD_Prof_Assign_Brch_Fuc.aspx.designer.cs">
-      <DependentUpon>AD_Prof_Assign_Brch_Fuc.aspx</DependentUpon>
     </Compile>
     <Compile Include="03_Student\ST_Choose_Prof.aspx.cs">
       <DependentUpon>ST_Choose_Prof.aspx</DependentUpon>
