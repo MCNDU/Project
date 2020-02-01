@@ -31,31 +31,6 @@ namespace Project._01_Administrator {
             }
         }
 
-        // To Be Continue ==>>
-        // 待修改
-        private void GetProfDetail (DataTable dataTable, int row) {
-
-            var PF_ID = dataTable.Rows[row][3];
-            var Batch = int.Parse (Batch_DDL.SelectedValue);
-            DataTable DT_dataTable = new DataTable ();
-
-            string Transform_queryString =
-            "SELECT Teacher.ID, Teacher.Name, Teacher.Department, Teacher.Job, Teacher.Degree, Teacher.Exp, Teacher.Address, Teacher.Field, ExamPoint_Log.Exam_Point " +
-            "FROM Teacher CROSS JOIN ExamPoint_Log " +
-            "WHERE (ExamPoint_Log.Batch = " + Batch + ") AND (ExamPoint_Log.ID = " + PF_ID + ") AND (Teacher.ID = " + PF_ID + ")";
-
-            SqlConnection connection = new SqlConnection (ConStr);
-            SqlDataAdapter adapter = new SqlDataAdapter (Transform_queryString, connection);
-
-            // 將取得的資料放入dataTable
-            adapter.Fill (DT_dataTable);
-
-            // To Be Continue ==>>
-            // 分頁功能
-            Teacher_DV.DataSource = DT_dataTable;
-            Teacher_DV.DataBind ();
-        }
-
         protected void Batch_DDL_SelectedIndexChanged (object sender, EventArgs e) {
 
             // 抓取使用者所選期別並刷新資料表格
@@ -80,11 +55,11 @@ namespace Project._01_Administrator {
                 Student_DV.Rows[DV_Row + pointer].Cells[1].Text = Student_GV.SelectedRow.Cells[GV_Cell + pointer].Text;
             }
 
-            // 取得當前研究生資料傳送資料至Teacher_DV
+            // 取得當前研究生資料傳送資料至Commit_DV
             // 以顯示分配給該名研究生之三名審查委員資料
-            // 且依據順序放置於Teacher_DV之1、2、3分頁
+            // 且依據順序放置於Commit_DV之1、2、3分頁
             string ST_queryString =
-                "SELECT ID, Name, Ch_Title, First_Prof, Second_Commit, Third_Commit, First_Commit FROM [Student] WHERE Batch = " + int.Parse (Batch_DDL.SelectedValue) + ";";
+                "SELECT ID, Name, Ch_Title, First_Prof, First_Commit, Second_Commit, Third_Commit FROM [Student] WHERE Batch = " + int.Parse (Batch_DDL.SelectedValue) + ";";
 
             Getdata (ST_dataTable, ST_queryString);
             GetProfDetail (ST_dataTable, Student_GV.SelectedIndex);
@@ -108,7 +83,7 @@ namespace Project._01_Administrator {
 
             // 取得該期研究生資料 及 資料轉換功能(教師編號轉換姓名)
             string ST_queryString =
-                "SELECT ID, Name, Ch_Title, First_Prof, Second_Commit, Third_Commit, First_Commit FROM [Student] WHERE Batch = " + Batch + ";";
+                "SELECT ID, Name, Ch_Title, First_Prof, First_Commit, Second_Commit, Third_Commit FROM [Student] WHERE Batch = " + Batch + ";";
 
             Getdata (ST_dataTable, ST_queryString);
             Transform (Student_GV, ST_dataTable, 3, 6);
@@ -177,6 +152,66 @@ namespace Project._01_Administrator {
                     }
                 }
             }
+        }
+
+        private void GetProfDetail (DataTable dataTable, int row) {
+
+            // semester 使用者所選學期
+            // Details_DataTable 儲存查詢到的三筆審查委員資料
+            var semester = int.Parse (Batch_DDL.SelectedValue);
+
+            //定義Details_DataTable及內部資料行(要有那些欄位)
+            DataTable Details_DataTable = new DataTable ();
+            Details_DataTable.Columns.Add ("ID");
+            Details_DataTable.Columns.Add ("Name");
+            Details_DataTable.Columns.Add ("Department");
+            Details_DataTable.Columns.Add ("Job");
+            Details_DataTable.Columns.Add ("Degree");
+            Details_DataTable.Columns.Add ("Exp");
+            Details_DataTable.Columns.Add ("Address");
+            Details_DataTable.Columns.Add ("Field");
+            Details_DataTable.Columns.Add ("Exam_Point");
+
+            SqlConnection connection = new SqlConnection (ConStr);
+            DataSet dataSet = new DataSet ();
+
+            for (int col = 4; col <= 6; col++) {
+
+                // PF_ID 教師編號
+                var PF_ID = dataTable.Rows[row][col];
+
+                //查詢指令
+                string Transform_queryString =
+                "SELECT Teacher.ID, Teacher.Name, Teacher.Department, Teacher.Job, Teacher.Degree, Teacher.Exp, Teacher.Address, Teacher.Field, ExamPoint_Log.Exam_Point " +
+                "FROM Teacher CROSS JOIN ExamPoint_Log " +
+                "WHERE (ExamPoint_Log.Batch = " + semester + " OR ExamPoint_Log.Batch = N'0' ) AND (ExamPoint_Log.ID = " + PF_ID + ") AND (Teacher.ID = " + PF_ID + ")";
+                
+                //將查詢到的資料填入dataset中，名為4、5、6的三個table
+                //註：table名稱乃對應Student_DV的4、5、6列
+                //資料傳送路徑：SQL -> adapter -> dataset -> 三個Commit_DV
+                SqlDataAdapter dataAdapter = new SqlDataAdapter ();
+                dataAdapter.TableMappings.Add ("Table", col.ToString ());
+                connection.Open ();
+                SqlCommand command = new SqlCommand (Transform_queryString, connection) {
+                    CommandType = CommandType.Text
+                };
+                dataAdapter.SelectCommand = command;
+
+                dataAdapter.Fill (dataSet);
+
+                connection.Close ();
+            }
+
+            // 將Commit_DV的資料來源綁定
+            // 已填入三筆審查委員資料的dataTable
+            
+            Commit_DV_1.DataSource = dataSet.Tables["4"];
+            Commit_DV_1.DataBind ();
+            Commit_DV_2.DataSource = dataSet.Tables["5"];
+            Commit_DV_2.DataBind ();
+            Commit_DV_3.DataSource = dataSet.Tables["6"];
+            Commit_DV_3.DataBind ();
+            
         }
         /** 以上為個控制項運作時，將會呼叫使用的方法 **/
     }
