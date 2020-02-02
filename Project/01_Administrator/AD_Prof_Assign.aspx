@@ -59,6 +59,24 @@
                     </Fields>
                 </asp:DetailsView>
                 <asp:Label ID="Title_Commit_LB" runat="server" Text="審查委員" Font-Bold="True"></asp:Label>
+                <asp:DetailsView ID="Commit_DV_0" runat="server" AutoGenerateRows="False" DataKeyNames="ID" Height="50px" Width="100%">
+                    <Fields>
+                        <asp:TemplateField HeaderText="ID" SortExpression="ID">
+                            <ItemTemplate>
+                                <asp:DropDownList ID="ID_DDL" runat="server" AutoPostBack="True" DataSourceID="Test_SDS" SelectedValue='<%# Bind("ID") %>' DataTextField="ID" DataValueField="ID" Width="100%">
+                                </asp:DropDownList>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
+                        <asp:BoundField DataField="Department" HeaderText="Department" SortExpression="Department" />
+                        <asp:BoundField DataField="Job" HeaderText="Job" SortExpression="Job" />
+                        <asp:BoundField DataField="Degree" HeaderText="Degree" SortExpression="Degree" />
+                        <asp:BoundField DataField="Exp" HeaderText="Exp" SortExpression="Exp" />
+                        <asp:BoundField DataField="Address" HeaderText="Address" SortExpression="Address" />
+                        <asp:BoundField DataField="Field" HeaderText="Field" SortExpression="Field" />
+                        <asp:BoundField DataField="Exam_Point" HeaderText="Exam_Point" SortExpression="Exam_Point" />
+                    </Fields>
+                </asp:DetailsView>
                 <asp:DetailsView ID="Commit_DV_1" runat="server" AutoGenerateRows="False" DataKeyNames="ID" Height="50px" Width="100%">
                     <Fields>
                         <asp:BoundField DataField="ID" HeaderText="ID" ReadOnly="True" SortExpression="ID" />
@@ -103,5 +121,12 @@
     </table>
     <asp:SqlDataSource ID="Batch" runat="server" ConnectionString="<%$ ConnectionStrings:Project_Db %>" SelectCommand="SELECT DISTINCT [Batch] FROM [Student]"></asp:SqlDataSource>
     <asp:SqlDataSource ID="Student_SDS_ForDV" runat="server" ConnectionString="<%$ ConnectionStrings:Project_Db %>" SelectCommand="SELECT [ID], [Name], [Ch_Title], [First_Commit], [Second_Commit], [Third_Commit], [First_Prof] FROM [Student]"></asp:SqlDataSource>
-    <asp:SqlDataSource ID="Student_SDS_ForDV0" runat="server" ConnectionString="<%$ ConnectionStrings:Project_Db %>" SelectCommand="SELECT Teacher.ID, Teacher.Name, Teacher.Department, Teacher.Job, Teacher.Degree, Teacher.Exp, Teacher.Address, Teacher.Field, ExamPoint_Log.Exam_Point FROM Teacher CROSS JOIN ExamPoint_Log WHERE (ExamPoint_Log.Batch = N'109') AND (ExamPoint_Log.ID = 1) AND (Teacher.ID = 1)"></asp:SqlDataSource>
+     
+    <asp:SqlDataSource ID="Test_SDS" runat="server" ConnectionString="<%$ ConnectionStrings:Project_Db %>" SelectCommand="SELECT [ID] FROM [ExamPoint_Log] WHERE (([Batch] = @Batch) OR ([Batch] = @Batch2))">
+        <SelectParameters>
+            <asp:ControlParameter ControlID="Batch_DDL" DefaultValue="0" Name="Batch" PropertyName="SelectedValue" Type="String" />
+            <asp:Parameter DefaultValue="0" Name="Batch2" Type="String" />
+        </SelectParameters>
+    </asp:SqlDataSource>
+     
 </asp:Content>

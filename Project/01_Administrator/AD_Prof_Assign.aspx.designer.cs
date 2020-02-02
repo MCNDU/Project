@@ -103,6 +103,15 @@ namespace Project._01_Administrator {
         protected global::System.Web.UI.WebControls.Label Title_Commit_LB;
 
         /// <summary>
+        /// Commit_DV_0 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DetailsView Commit_DV_0;
+
+        /// <summary>
         /// Commit_DV_1 控制項。
         /// </summary>
         /// <remarks>
@@ -148,12 +157,12 @@ namespace Project._01_Administrator {
         protected global::System.Web.UI.WebControls.SqlDataSource Student_SDS_ForDV;
 
         /// <summary>
-        /// Student_SDS_ForDV0 控制項。
+        /// Test_SDS 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource Student_SDS_ForDV0;
+        protected global::System.Web.UI.WebControls.SqlDataSource Test_SDS;
     }
 }

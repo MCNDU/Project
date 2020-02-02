@@ -176,7 +176,7 @@ namespace Project._01_Administrator {
             DataSet dataSet = new DataSet ();
 
             for (int col = 4; col <= 6; col++) {
-
+            
                 // PF_ID 教師編號
                 var PF_ID = dataTable.Rows[row][col];
 
@@ -192,6 +192,7 @@ namespace Project._01_Administrator {
                 SqlDataAdapter dataAdapter = new SqlDataAdapter ();
                 dataAdapter.TableMappings.Add ("Table", col.ToString ());
                 connection.Open ();
+
                 SqlCommand command = new SqlCommand (Transform_queryString, connection) {
                     CommandType = CommandType.Text
                 };
@@ -204,14 +205,14 @@ namespace Project._01_Administrator {
 
             // 將Commit_DV的資料來源綁定
             // 已填入三筆審查委員資料的dataTable
-            
+            Commit_DV_0.DataSource = dataSet.Tables["4"];
+            Commit_DV_0.DataBind ();
             Commit_DV_1.DataSource = dataSet.Tables["4"];
             Commit_DV_1.DataBind ();
             Commit_DV_2.DataSource = dataSet.Tables["5"];
             Commit_DV_2.DataBind ();
             Commit_DV_3.DataSource = dataSet.Tables["6"];
             Commit_DV_3.DataBind ();
-            
         }
         /** 以上為個控制項運作時，將會呼叫使用的方法 **/
     }
