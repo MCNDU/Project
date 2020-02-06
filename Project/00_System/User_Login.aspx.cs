@@ -9,6 +9,7 @@ using System.Data.SqlClient;
 
 namespace Project._00_System {
     public partial class User_Login : System.Web.UI.Page {
+
         //連結資料庫，命名為cnStr
         //@"資料來源=(本地資料庫)\"
         String cnStr = @"Data Source=(LocalDB)\MSSQLLocalDB;" +
@@ -51,7 +52,7 @@ namespace Project._00_System {
                             }
 
                             else if (sdr.GetValue (0).ToString () == "Admin") {
-                                Response.Redirect ("Manage_Account.aspx");
+                                Response.Redirect ("AD_1mainpage.aspx.aspx");
                             }
 
                             else {

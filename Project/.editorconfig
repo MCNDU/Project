@@ -20,3 +20,6 @@ dotnet_diagnostic.CA2100.severity = none
 
 # CA1716: 識別項不應該與關鍵字相符
 dotnet_diagnostic.CA1716.severity = none
+
+# CA1303: 不要將常值當做已當地語系化的參數傳遞
+dotnet_diagnostic.CA1303.severity = none

@@ -11,7 +11,7 @@ using System.Net.Mail;
 
 namespace Project._00_System {
     public partial class User_Login_Forget_Password : System.Web.UI.Page {
-        String cnStr = @"Data Source=(LocalDB)\MSSQLLocalDB;" +
+        readonly String cnStr = @"Data Source=(LocalDB)\MSSQLLocalDB;" +
                     "AttachDBFilename=|DataDirectory|Project_Db.mdf";
 
         protected void Page_Load (object sender, EventArgs e) {
@@ -60,10 +60,6 @@ namespace Project._00_System {
                     }
                 }
             }
-        }
-
-        protected void Button1_Click () {
-
         }
     }
 }

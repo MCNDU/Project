@@ -86,7 +86,6 @@
     <div class="div">
 
         <h2 class="h2">論文審查系統</h2>
-
         <form id="Login_Form" runat="server" style="height: 316px">
             <asp:Label Text="帳號" CssClass="lblid" runat="server" />
             <asp:TextBox ID="Account_TBX" runat="server" CssClass="txtid" required="帳號為您的學號" placeholder="學號" />

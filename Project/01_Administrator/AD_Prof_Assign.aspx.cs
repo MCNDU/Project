@@ -154,6 +154,8 @@ namespace Project._01_Administrator {
             }
         }
 
+        //當使用者選取Student_GV之中某一特定研究生時，
+        //顯示審查委員資料的三個Commit_DV會分別顯示三名委員的詳細資料
         private void GetProfDetail (DataTable dataTable, int row) {
 
             // semester 使用者所選學期
@@ -205,8 +207,6 @@ namespace Project._01_Administrator {
 
             // 將Commit_DV的資料來源綁定
             // 已填入三筆審查委員資料的dataTable
-            Commit_DV_0.DataSource = dataSet.Tables["4"];
-            Commit_DV_0.DataBind ();
             Commit_DV_1.DataSource = dataSet.Tables["4"];
             Commit_DV_1.DataBind ();
             Commit_DV_2.DataSource = dataSet.Tables["5"];
@@ -214,6 +214,9 @@ namespace Project._01_Administrator {
             Commit_DV_3.DataSource = dataSet.Tables["6"];
             Commit_DV_3.DataBind ();
         }
+
+        //使用者可點選任一Commit_DV的下拉式選單以更換該研究生的審查委員
+
         /** 以上為個控制項運作時，將會呼叫使用的方法 **/
     }
 }

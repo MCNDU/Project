@@ -59,7 +59,7 @@
                     </Fields>
                 </asp:DetailsView>
                 <asp:Label ID="Title_Commit_LB" runat="server" Text="審查委員" Font-Bold="True"></asp:Label>
-                <asp:DetailsView ID="Commit_DV_0" runat="server" AutoGenerateRows="False" DataKeyNames="ID" Height="50px" Width="100%">
+                <asp:DetailsView ID="Commit_DV_1" runat="server" AutoGenerateRows="False" DataKeyNames="ID" Height="50px" Width="100%">
                     <Fields>
                         <asp:TemplateField HeaderText="ID" SortExpression="ID">
                             <ItemTemplate>
@@ -77,22 +77,14 @@
                         <asp:BoundField DataField="Exam_Point" HeaderText="Exam_Point" SortExpression="Exam_Point" />
                     </Fields>
                 </asp:DetailsView>
-                <asp:DetailsView ID="Commit_DV_1" runat="server" AutoGenerateRows="False" DataKeyNames="ID" Height="50px" Width="100%">
-                    <Fields>
-                        <asp:BoundField DataField="ID" HeaderText="ID" ReadOnly="True" SortExpression="ID" />
-                        <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
-                        <asp:BoundField DataField="Department" HeaderText="Department" SortExpression="Department" />
-                        <asp:BoundField DataField="Job" HeaderText="Job" SortExpression="Job" />
-                        <asp:BoundField DataField="Degree" HeaderText="Degree" SortExpression="Degree" />
-                        <asp:BoundField DataField="Exp" HeaderText="Exp" SortExpression="Exp" />
-                        <asp:BoundField DataField="Address" HeaderText="Address" SortExpression="Address" />
-                        <asp:BoundField DataField="Field" HeaderText="Field" SortExpression="Field" />
-                        <asp:BoundField DataField="Exam_Point" HeaderText="Exam_Point" SortExpression="Exam_Point" />
-                    </Fields>
-                </asp:DetailsView>
                 <asp:DetailsView ID="Commit_DV_2" runat="server" AutoGenerateRows="False" DataKeyNames="ID" Height="50px" Width="100%">
                     <Fields>
-                        <asp:BoundField DataField="ID" HeaderText="ID" ReadOnly="True" SortExpression="ID" />
+                        <asp:TemplateField HeaderText="ID" SortExpression="ID">
+                            <ItemTemplate>
+                                <asp:DropDownList ID="ID_DDL" runat="server" AutoPostBack="True" DataSourceID="Test_SDS" SelectedValue='<%# Bind("ID") %>' DataTextField="ID" DataValueField="ID" Width="100%">
+                                </asp:DropDownList>
+                            </ItemTemplate>
+                        </asp:TemplateField>
                         <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
                         <asp:BoundField DataField="Department" HeaderText="Department" SortExpression="Department" />
                         <asp:BoundField DataField="Job" HeaderText="Job" SortExpression="Job" />
@@ -105,7 +97,12 @@
                 </asp:DetailsView>
                 <asp:DetailsView ID="Commit_DV_3" runat="server" AutoGenerateRows="False" DataKeyNames="ID" Height="50px" Width="100%">
                     <Fields>
-                        <asp:BoundField DataField="ID" HeaderText="ID" ReadOnly="True" SortExpression="ID" />
+                        <asp:TemplateField HeaderText="ID" SortExpression="ID">
+                            <ItemTemplate>
+                                <asp:DropDownList ID="ID_DDL" runat="server" AutoPostBack="True" DataSourceID="Test_SDS" SelectedValue='<%# Bind("ID") %>' DataTextField="ID" DataValueField="ID" Width="100%">
+                                </asp:DropDownList>
+                            </ItemTemplate>
+                        </asp:TemplateField>
                         <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
                         <asp:BoundField DataField="Department" HeaderText="Department" SortExpression="Department" />
                         <asp:BoundField DataField="Job" HeaderText="Job" SortExpression="Job" />
