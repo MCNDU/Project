@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Text;
+using System.Threading;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -6,6 +8,8 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
+using System.Configuration;
 
 namespace Project._03_Student {
     public partial class ST_Choose_Prof : System.Web.UI.Page {
@@ -33,8 +37,89 @@ namespace Project._03_Student {
             using (SqlConnection cn = new SqlConnection ()) {
                 cn.ConnectionString = cnStr;
                 cn.Open ();
-                SqlCommand cmd = new SqlCommand ("", cn);
-                cmd.CommandType = CommandType.StoredProcedure;
+                //SqlCommand cmd = new SqlCommand ("", cn);
+                //cmd.CommandType = CommandType.StoredProcedure;
+                string search_ID_1 = CAP_Name_1.Text;
+                string search_ID_2 = CAP_Name_2.Text;
+                string search_ID_3 = CAP_Name_3.Text;
+                if (search_ID_1 != "" && search_ID_2 == "" && search_ID_3 == "")
+                {
+                    string sqlStr = "SELECT ID FROM Teacher WHERE Name = '" + search_ID_1 + "'";
+                    SqlCommand cmd = new SqlCommand(sqlStr, cn);
+                    string x = cmd.ExecuteScalar().ToString();
+                    StringBuilder SQL_str = new StringBuilder();
+                    SQL_str.Append("insert into Teacher_Student(Teacher_ID,Student_ID,Comment_Professor,Permission) values('" + x + "','" + ID + "','yes','1')");
+                    using (SqlCommand cmp = new SqlCommand(SQL_str.ToString(), cn))
+                    {
+                        cmp.ExecuteNonQuery(); //執行sql命令
+                        //Finish.Visible = true;
+                        //Finish.Text = "選擇指導老師成功......";  //成功訊息
+                        //Response.Redirect("Personalinformation.aspx");
+                    }
+                }
+                else if (search_ID_1 != "" && search_ID_2 != "" && search_ID_3 == "")
+                {
+                    string sqlFir = "SELECT ID FROM Teacher WHERE Name = '" + search_ID_1 + "'";
+                    string sqlSec = "SELECT ID FROM Teacher WHERE Name = '" + search_ID_2 + "'";
+                    SqlCommand cmd_F = new SqlCommand(sqlFir, cn);
+                    SqlCommand cmd_S = new SqlCommand(sqlSec, cn);
+                    string x = cmd_F.ExecuteScalar().ToString();
+                    string y = cmd_S.ExecuteScalar().ToString();
+                    StringBuilder SQL_Fir = new StringBuilder();
+                    StringBuilder SQL_Sec = new StringBuilder();
+                    SQL_Fir.Append("insert into Teacher_Student(Teacher_ID,Student_ID,Comment_Professor,Permission) values('" + x + "','" + ID + "','yes','0.5')");  //新增sql語法內容---insert into
+                    SQL_Sec.Append("insert into Teacher_Student(Teacher_ID,Student_ID,Comment_Professor,Permission) values('" + y + "','" + ID + "','no_1','0.5')");  //新增sql語法內容---insert into
+                    using (SqlCommand cmp = new SqlCommand(SQL_Fir.ToString(), cn))
+                    {
+                        cmp.ExecuteNonQuery(); //執行sql命令
+                    }
+                    using (SqlCommand cmp = new SqlCommand(SQL_Sec.ToString(), cn))
+                    {
+                        cmp.ExecuteNonQuery(); //執行sql命令
+                    }
+                    //Finish.Visible = true;
+                    //Finish.Text = "選擇指導老師成功......";  //成功訊息
+                    Response.Redirect("Personalinformation.aspx");
+
+                }
+                else if (search_ID_1 != "" && search_ID_2 != "" && search_ID_3 != "")
+                {
+                    string sqlFir = "SELECT ID FROM Teacher WHERE Name = '" + search_ID_1 + "'";
+                    string sqlSec = "SELECT ID FROM Teacher WHERE Name = '" + search_ID_2 + "'";
+                    string sqlTir = "SELECT ID FROM Teacher WHERE Name = '" + search_ID_3 + "'";
+                    SqlCommand cmd_F = new SqlCommand(sqlFir, cn);
+                    SqlCommand cmd_S = new SqlCommand(sqlSec, cn);
+                    SqlCommand cmd_T = new SqlCommand(sqlTir, cn);
+                    string x = cmd_F.ExecuteScalar().ToString();
+                    string y = cmd_S.ExecuteScalar().ToString();
+                    string z = cmd_T.ExecuteScalar().ToString();
+                    StringBuilder SQL_Fir = new StringBuilder();
+                    StringBuilder SQL_Sec = new StringBuilder();
+                    StringBuilder SQL_Tir = new StringBuilder();
+                    SQL_Fir.Append("insert into Teacher_Student(Teacher_ID,Student_ID,Comment_Professor,Permission) values('" + x + "','" + ID + "','yes','0.5')");  //新增sql語法內容---insert into
+                    SQL_Sec.Append("insert into Teacher_Student(Teacher_ID,Student_ID,Comment_Professor,Permission) values('" + y + "','" + ID + "','no_1','0.5')");  //新增sql語法內容---insert into
+                    SQL_Tir.Append("insert into Teacher_Student(Teacher_ID,Student_ID,Comment_Professor,Permission) values('" + z + "','" + ID + "','no_2','0.5')");  //新增sql語法內容---insert into
+                    using (SqlCommand cmp = new SqlCommand(SQL_Fir.ToString(), cn))
+                    {
+                        cmp.ExecuteNonQuery(); //執行sql命令
+                    }
+                    using (SqlCommand cmp = new SqlCommand(SQL_Sec.ToString(), cn))
+                    {
+                        cmp.ExecuteNonQuery(); //執行sql命令
+                    }
+                    using (SqlCommand cmp = new SqlCommand(SQL_Tir.ToString(), cn))
+                    {
+                        cmp.ExecuteNonQuery(); //執行sql命令
+                    }
+                    //Finish.Visible = true;
+                    //Finish.Text = "選擇指導老師成功......";  //成功訊息
+                    Response.Redirect("Personalinformation.aspx");
+                }
+                else{
+
+                }
+
+                cn.Close();
                 //cmd.Parameters.Add (new SqlParameter("@", SqlDbType.));
             }
         }
@@ -141,6 +226,34 @@ namespace Project._03_Student {
             else {
 
             }
+        }
+
+        protected void Custom1 (object sender, System.EventArgs e)
+        {
+            FAP_Name.Text = CAP_Name_1.Text;
+            FAP_School.Text = CAP_School_1.Text;
+            FAP_Edu.Text = CAP_Edu_1.Text;
+            FAP_Exp.Text = CAP_Exp_1.Text;
+            FAP_Address.Text = CAP_Address_1.Text;
+            FAP_Phone.Text = CAP_Phone_1.Text;
+        }
+        protected void Custom2 (object sender, System.EventArgs e)
+        {
+            SAP_Name.Text = CAP_Name_2.Text;
+            SAP_School.Text = CAP_School_2.Text;
+            SAP_Edu.Text = CAP_Edu_2.Text;
+            SAP_Exp.Text = CAP_Exp_2.Text;
+            SAP_Address.Text = CAP_Address_2.Text;
+            SAP_Phone.Text = CAP_Phone_2.Text;
+        }
+        protected void Custom3(object sender, System.EventArgs e)
+        {
+            TAP_Name.Text = CAP_Name_3.Text;
+            TAP_School.Text = CAP_School_3.Text;
+            TAP_Edu.Text = CAP_Edu_3.Text;
+            TAP_Exp.Text = CAP_Exp_3.Text;
+            TAP_Address.Text = CAP_Address_3.Text;
+            TAP_Phone.Text = CAP_Phone_3.Text;
         }
     }
 }

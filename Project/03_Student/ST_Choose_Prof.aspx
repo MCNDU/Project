@@ -117,7 +117,7 @@
                         <asp:TableCell Width=""></asp:TableCell>
                         <asp:TableCell Width="">
                             <!--送出自行填寫的指導教授資料-->
-                            <asp:Button ID="Costom_It_Yourself" runat="server" Text="自訂指導教授" />
+                            <asp:Button ID="Costom1" runat="server" Text="自訂指導教授" OnClick="Custom1" />
                         </asp:TableCell>
                     </asp:TableRow>
                 </asp:Table>
@@ -127,44 +127,44 @@
                     <asp:TableRow HorizontalAlign="Center">
                         <asp:TableCell Width="">姓名</asp:TableCell>
                         <asp:TableCell Width="">
-                            <asp:TextBox ID="TextBox1" runat="server" CssClass="TextBoxEdit"></asp:TextBox>
+                            <asp:TextBox ID="CAP_Name_2" runat="server" CssClass="TextBoxEdit"></asp:TextBox>
                         </asp:TableCell>
                     </asp:TableRow>
                     <asp:TableRow HorizontalAlign="Center">
                         <asp:TableCell Width="">學校系(所)</asp:TableCell>
                         <asp:TableCell Width="">
-                            <asp:TextBox ID="TextBox2" runat="server" CssClass="TextBoxEdit"></asp:TextBox>
+                            <asp:TextBox ID="CAP_School_2" runat="server" CssClass="TextBoxEdit"></asp:TextBox>
                         </asp:TableCell>
                     </asp:TableRow>
                     <asp:TableRow HorizontalAlign="Center">
                         <asp:TableCell Width="">學歷</asp:TableCell>
                         <asp:TableCell Width="">
-                            <asp:TextBox ID="TextBox3" runat="server" CssClass="TextBoxEdit"></asp:TextBox>
+                            <asp:TextBox ID="CAP_Edu_2" runat="server" CssClass="TextBoxEdit"></asp:TextBox>
                         </asp:TableCell>
                     </asp:TableRow>
                     <asp:TableRow HorizontalAlign="Center">
                         <asp:TableCell Width="">經歷</asp:TableCell>
                         <asp:TableCell Width="">
-                            <asp:TextBox ID="TextBox4" runat="server" CssClass="TextBoxEdit"></asp:TextBox>
+                            <asp:TextBox ID="CAP_Exp_2" runat="server" CssClass="TextBoxEdit"></asp:TextBox>
                         </asp:TableCell>
                     </asp:TableRow>
                     <asp:TableRow HorizontalAlign="Center">
                         <asp:TableCell Width="">通訊地址</asp:TableCell>
                         <asp:TableCell Width="">
-                            <asp:TextBox ID="TextBox5" runat="server" CssClass="TextBoxEdit"></asp:TextBox>
+                            <asp:TextBox ID="CAP_Address_2" runat="server" CssClass="TextBoxEdit"></asp:TextBox>
                         </asp:TableCell>
                     </asp:TableRow>
                     <asp:TableRow HorizontalAlign="Center">
                         <asp:TableCell Width="">聯絡電話</asp:TableCell>
                         <asp:TableCell Width="">
-                            <asp:TextBox ID="TextBox6" runat="server" CssClass="TextBoxEdit"></asp:TextBox>
+                            <asp:TextBox ID="CAP_Phone_2" runat="server" CssClass="TextBoxEdit"></asp:TextBox>
                         </asp:TableCell>
                     </asp:TableRow>
                     <asp:TableRow HorizontalAlign="Center">
                         <asp:TableCell Width=""></asp:TableCell>
                         <asp:TableCell Width="">
                             <!--送出自行填寫的指導教授資料-->
-                            <asp:Button ID="Button1" runat="server" Text="自訂指導教授" />
+                            <asp:Button ID="Costom2" runat="server" Text="自訂指導教授" OnClick="Custom2" />
                         </asp:TableCell>
                     </asp:TableRow>
                 </asp:Table>
@@ -174,44 +174,44 @@
                     <asp:TableRow HorizontalAlign="Center">
                         <asp:TableCell Width="">姓名</asp:TableCell>
                         <asp:TableCell Width="">
-                            <asp:TextBox ID="TextBox7" runat="server" CssClass="TextBoxEdit"></asp:TextBox>
+                            <asp:TextBox ID="CAP_Name_3" runat="server" CssClass="TextBoxEdit"></asp:TextBox>
                         </asp:TableCell>
                     </asp:TableRow>
                     <asp:TableRow HorizontalAlign="Center">
                         <asp:TableCell Width="">學校系(所)</asp:TableCell>
                         <asp:TableCell Width="">
-                            <asp:TextBox ID="TextBox8" runat="server" CssClass="TextBoxEdit"></asp:TextBox>
+                            <asp:TextBox ID="CAP_School_3" runat="server" CssClass="TextBoxEdit"></asp:TextBox>
                         </asp:TableCell>
                     </asp:TableRow>
                     <asp:TableRow HorizontalAlign="Center">
                         <asp:TableCell Width="">學歷</asp:TableCell>
                         <asp:TableCell Width="">
-                            <asp:TextBox ID="TextBox9" runat="server" CssClass="TextBoxEdit"></asp:TextBox>
+                            <asp:TextBox ID="CAP_Edu_3" runat="server" CssClass="TextBoxEdit"></asp:TextBox>
                         </asp:TableCell>
                     </asp:TableRow>
                     <asp:TableRow HorizontalAlign="Center">
                         <asp:TableCell Width="">經歷</asp:TableCell>
                         <asp:TableCell Width="">
-                            <asp:TextBox ID="TextBox10" runat="server" CssClass="TextBoxEdit"></asp:TextBox>
+                            <asp:TextBox ID="CAP_Exp_3" runat="server" CssClass="TextBoxEdit"></asp:TextBox>
                         </asp:TableCell>
                     </asp:TableRow>
                     <asp:TableRow HorizontalAlign="Center">
                         <asp:TableCell Width="">通訊地址</asp:TableCell>
                         <asp:TableCell Width="">
-                            <asp:TextBox ID="TextBox11" runat="server" CssClass="TextBoxEdit"></asp:TextBox>
+                            <asp:TextBox ID="CAP_Address_3" runat="server" CssClass="TextBoxEdit"></asp:TextBox>
                         </asp:TableCell>
                     </asp:TableRow>
                     <asp:TableRow HorizontalAlign="Center">
                         <asp:TableCell Width="">聯絡電話</asp:TableCell>
                         <asp:TableCell Width="">
-                            <asp:TextBox ID="TextBox12" runat="server" CssClass="TextBoxEdit"></asp:TextBox>
+                            <asp:TextBox ID="CAP_Phone_3" runat="server" CssClass="TextBoxEdit"></asp:TextBox>
                         </asp:TableCell>
                     </asp:TableRow>
                     <asp:TableRow HorizontalAlign="Center">
                         <asp:TableCell Width=""></asp:TableCell>
                         <asp:TableCell Width="">
                             <!--送出自行填寫的指導教授資料-->
-                            <asp:Button ID="Button2" runat="server" Text="自訂指導教授" />
+                            <asp:Button ID="Costum3" runat="server" Text="自訂指導教授" OnClick="Custom3" />
                         </asp:TableCell>
                     </asp:TableRow>
                 </asp:Table>
@@ -233,39 +233,39 @@
                 </asp:TableRow>
                 <asp:TableRow HorizontalAlign="Center">
                     <asp:TableCell>姓名</asp:TableCell>
-                    <asp:TableCell></asp:TableCell>
-                    <asp:TableCell></asp:TableCell>
-                    <asp:TableCell></asp:TableCell>
+                    <asp:TableCell ID="FAP_Name"></asp:TableCell>
+                    <asp:TableCell ID="SAP_Name"></asp:TableCell>
+                    <asp:TableCell ID="TAP_Name"></asp:TableCell>
                 </asp:TableRow>
                 <asp:TableRow HorizontalAlign="Center">
                     <asp:TableCell>學校系(所)</asp:TableCell>
-                    <asp:TableCell></asp:TableCell>
-                    <asp:TableCell></asp:TableCell>
-                    <asp:TableCell></asp:TableCell>
+                    <asp:TableCell ID="FAP_School"></asp:TableCell>
+                    <asp:TableCell ID="SAP_School"></asp:TableCell>
+                    <asp:TableCell ID="TAP_School"></asp:TableCell>
                 </asp:TableRow>
                 <asp:TableRow HorizontalAlign="Center">
                     <asp:TableCell>學歷</asp:TableCell>
-                    <asp:TableCell></asp:TableCell>
-                    <asp:TableCell></asp:TableCell>
-                    <asp:TableCell></asp:TableCell>
+                    <asp:TableCell ID="FAP_Edu"></asp:TableCell>
+                    <asp:TableCell ID="SAP_Edu"></asp:TableCell>
+                    <asp:TableCell ID="TAP_Edu"></asp:TableCell>
                 </asp:TableRow>
                 <asp:TableRow HorizontalAlign="Center">
                     <asp:TableCell>經歷</asp:TableCell>
-                    <asp:TableCell></asp:TableCell>
-                    <asp:TableCell></asp:TableCell>
-                    <asp:TableCell></asp:TableCell>
+                    <asp:TableCell ID="FAP_Exp"></asp:TableCell>
+                    <asp:TableCell ID="SAP_Exp"></asp:TableCell>
+                    <asp:TableCell ID="TAP_Exp"></asp:TableCell>
                 </asp:TableRow>
                 <asp:TableRow HorizontalAlign="Center">
                     <asp:TableCell>通訊地址</asp:TableCell>
-                    <asp:TableCell></asp:TableCell>
-                    <asp:TableCell></asp:TableCell>
-                    <asp:TableCell></asp:TableCell>
+                    <asp:TableCell ID="FAP_Address"></asp:TableCell>
+                    <asp:TableCell ID="SAP_Address"></asp:TableCell>
+                    <asp:TableCell ID="TAP_Address"></asp:TableCell>
                 </asp:TableRow>
                 <asp:TableRow HorizontalAlign="Center">
                     <asp:TableCell>聯絡電話</asp:TableCell>
-                    <asp:TableCell></asp:TableCell>
-                    <asp:TableCell></asp:TableCell>
-                    <asp:TableCell></asp:TableCell>
+                    <asp:TableCell ID="FAP_Phone"></asp:TableCell>
+                    <asp:TableCell ID="SAP_Phone"></asp:TableCell>
+                    <asp:TableCell ID="TAP_Phone"></asp:TableCell>
                 </asp:TableRow>
             </asp:Table>
             <asp:Table ID="Bottom_Here" runat="server" Height="25px" HorizontalAlign="Center" Width="800px" BorderStyle="None">

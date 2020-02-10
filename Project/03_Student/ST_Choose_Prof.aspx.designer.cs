@@ -7,10 +7,12 @@
 // </自動產生的>
 //------------------------------------------------------------------------------
 
-namespace Project._03_Student {
+namespace Project._03_Student
+{
 
 
-    public partial class ST_Choose_Prof {
+    public partial class ST_Choose_Prof
+    {
 
         /// <summary>
         /// SqlDataSource1 控制項。
@@ -175,13 +177,13 @@ namespace Project._03_Student {
         protected global::System.Web.UI.WebControls.TextBox CAP_Phone_1;
 
         /// <summary>
-        /// Costom_It_Yourself 控制項。
+        /// Costom1 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Costom_It_Yourself;
+        protected global::System.Web.UI.WebControls.Button Costom1;
 
         /// <summary>
         /// Table_Costom_2 控制項。
@@ -193,67 +195,67 @@ namespace Project._03_Student {
         protected global::System.Web.UI.WebControls.Table Table_Costom_2;
 
         /// <summary>
-        /// TextBox1 控制項。
+        /// CAP_Name_2 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox CAP_Name_2;
 
         /// <summary>
-        /// TextBox2 控制項。
+        /// CAP_School_2 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox CAP_School_2;
 
         /// <summary>
-        /// TextBox3 控制項。
+        /// CAP_Edu_2 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox CAP_Edu_2;
 
         /// <summary>
-        /// TextBox4 控制項。
+        /// CAP_Exp_2 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox4;
+        protected global::System.Web.UI.WebControls.TextBox CAP_Exp_2;
 
         /// <summary>
-        /// TextBox5 控制項。
+        /// CAP_Address_2 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox5;
+        protected global::System.Web.UI.WebControls.TextBox CAP_Address_2;
 
         /// <summary>
-        /// TextBox6 控制項。
+        /// CAP_Phone_2 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox6;
+        protected global::System.Web.UI.WebControls.TextBox CAP_Phone_2;
 
         /// <summary>
-        /// Button1 控制項。
+        /// Costom2 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button Costom2;
 
         /// <summary>
         /// Table_Costom_3 控制項。
@@ -265,67 +267,67 @@ namespace Project._03_Student {
         protected global::System.Web.UI.WebControls.Table Table_Costom_3;
 
         /// <summary>
-        /// TextBox7 控制項。
+        /// CAP_Name_3 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox7;
+        protected global::System.Web.UI.WebControls.TextBox CAP_Name_3;
 
         /// <summary>
-        /// TextBox8 控制項。
+        /// CAP_School_3 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox8;
+        protected global::System.Web.UI.WebControls.TextBox CAP_School_3;
 
         /// <summary>
-        /// TextBox9 控制項。
+        /// CAP_Edu_3 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox9;
+        protected global::System.Web.UI.WebControls.TextBox CAP_Edu_3;
 
         /// <summary>
-        /// TextBox10 控制項。
+        /// CAP_Exp_3 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox10;
+        protected global::System.Web.UI.WebControls.TextBox CAP_Exp_3;
 
         /// <summary>
-        /// TextBox11 控制項。
+        /// CAP_Address_3 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox11;
+        protected global::System.Web.UI.WebControls.TextBox CAP_Address_3;
 
         /// <summary>
-        /// TextBox12 控制項。
+        /// CAP_Phone_3 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox12;
+        protected global::System.Web.UI.WebControls.TextBox CAP_Phone_3;
 
         /// <summary>
-        /// Button2 控制項。
+        /// Costum3 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.Button Costum3;
 
         /// <summary>
         /// Choose_Title 控制項。
@@ -344,6 +346,168 @@ namespace Project._03_Student {
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Table Select_AP_Table;
+
+        /// <summary>
+        /// FAP_Name 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell FAP_Name;
+
+        /// <summary>
+        /// SAP_Name 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell SAP_Name;
+
+        /// <summary>
+        /// TAP_Name 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell TAP_Name;
+
+        /// <summary>
+        /// FAP_School 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell FAP_School;
+
+        /// <summary>
+        /// SAP_School 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell SAP_School;
+
+        /// <summary>
+        /// TAP_School 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell TAP_School;
+
+        /// <summary>
+        /// FAP_Edu 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell FAP_Edu;
+
+        /// <summary>
+        /// SAP_Edu 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell SAP_Edu;
+
+        /// <summary>
+        /// TAP_Edu 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell TAP_Edu;
+
+        /// <summary>
+        /// FAP_Exp 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell FAP_Exp;
+
+        /// <summary>
+        /// SAP_Exp 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell SAP_Exp;
+
+        /// <summary>
+        /// TAP_Exp 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell TAP_Exp;
+
+        /// <summary>
+        /// FAP_Address 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell FAP_Address;
+
+        /// <summary>
+        /// SAP_Address 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell SAP_Address;
+
+        /// <summary>
+        /// TAP_Address 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell TAP_Address;
+
+        /// <summary>
+        /// FAP_Phone 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell FAP_Phone;
+
+        /// <summary>
+        /// SAP_Phone 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell SAP_Phone;
+
+        /// <summary>
+        /// TAP_Phone 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell TAP_Phone;
 
         /// <summary>
         /// Bottom_Here 控制項。
