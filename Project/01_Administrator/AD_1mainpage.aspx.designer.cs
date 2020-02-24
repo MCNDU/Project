@@ -7,12 +7,10 @@
 // </自動產生的>
 //------------------------------------------------------------------------------
 
-namespace ThesisMISblankversion
-{
+namespace ThesisMISblankversion {
 
 
-    public partial class AD_mainpage
-    {
+    public partial class AD_mainpage {
 
         /// <summary>
         /// form1 控制項。

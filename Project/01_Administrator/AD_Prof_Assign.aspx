@@ -18,10 +18,10 @@
                     </Columns>
                 </asp:GridView>
                 </div>
-                <asp:Label ID="Doc_Title_Forward" runat="server" Text="國防大學管理學院資訊管理學系"></asp:Label>
-                <asp:DropDownList ID="Batch_DDL" runat="server" AppendDataBoundItems="True" AutoPostBack="True" DataSourceID="Batch" DataTextField="Batch" DataValueField="Batch" OnSelectedIndexChanged="Batch_DDL_SelectedIndexChanged">
+                <asp:Label ID="Doc_Title_Forward" runat="server" Text="國防大學管理學院資訊管理學系第"></asp:Label>
+                <asp:DropDownList ID="Semester_DDL" runat="server" AppendDataBoundItems="True" AutoPostBack="True" DataSourceID="Batch" DataTextField="Batch" DataValueField="Batch" OnSelectedIndexChanged="Semester_DDL_SelectedIndexChanged">
                 </asp:DropDownList>
-                <asp:Label ID="Doc_Title__Backward" runat="server" Text="期論文計畫書審查成績冊"></asp:Label>
+                <asp:Label ID="Doc_Title__Backward" runat="server" Text="學期論文計畫書審查成績冊"></asp:Label>
                 <div style="width: 100%; height: 47%; overflow: scroll">
                 <asp:GridView ID="Student_GV" runat="server" AutoGenerateColumns="False" DataKeyNames="ID" PageSize="25" ShowHeaderWhenEmpty="True" Width="100%" AutoGenerateSelectButton="True" OnSelectedIndexChanged="Student_GV_SelectedIndexChanged">
                     <Columns>
@@ -61,56 +61,56 @@
                 <asp:Label ID="Title_Commit_LB" runat="server" Text="審查委員" Font-Bold="True"></asp:Label>
                 <asp:DetailsView ID="Commit_DV_1" runat="server" AutoGenerateRows="False" DataKeyNames="ID" Height="50px" Width="100%">
                     <Fields>
-                        <asp:TemplateField HeaderText="ID" SortExpression="ID">
+                        <asp:TemplateField HeaderText="教師編號" SortExpression="ID">
                             <ItemTemplate>
-                                <asp:DropDownList ID="ID_DDL" runat="server" AutoPostBack="True" DataSourceID="Test_SDS" SelectedValue='<%# Bind("ID") %>' DataTextField="ID" DataValueField="ID" Width="100%">
+                                <asp:DropDownList ID="ID_DDL" runat="server" AutoPostBack="True" DataSourceID="Test_SDS" SelectedValue='<%# Bind("ID") %>' DataTextField="ID" DataValueField="ID" Width="100%" OnSelectedIndexChanged="Commit_DDL_SelectedIndexChanged">
                                 </asp:DropDownList>
                             </ItemTemplate>
                         </asp:TemplateField>
-                        <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
-                        <asp:BoundField DataField="Department" HeaderText="Department" SortExpression="Department" />
-                        <asp:BoundField DataField="Job" HeaderText="Job" SortExpression="Job" />
-                        <asp:BoundField DataField="Degree" HeaderText="Degree" SortExpression="Degree" />
-                        <asp:BoundField DataField="Exp" HeaderText="Exp" SortExpression="Exp" />
-                        <asp:BoundField DataField="Address" HeaderText="Address" SortExpression="Address" />
-                        <asp:BoundField DataField="Field" HeaderText="Field" SortExpression="Field" />
-                        <asp:BoundField DataField="Exam_Point" HeaderText="Exam_Point" SortExpression="Exam_Point" />
+                        <asp:BoundField DataField="Name" HeaderText="教師名稱" SortExpression="Name" />
+                        <asp:BoundField DataField="Department" HeaderText="現職單位" SortExpression="Department" />
+                        <asp:BoundField DataField="Job" HeaderText="職稱" SortExpression="Job" />
+                        <asp:BoundField DataField="Degree" HeaderText="學歷" SortExpression="Degree" />
+                        <asp:BoundField DataField="Exp" HeaderText="經歷" SortExpression="Exp" />
+                        <asp:BoundField DataField="Address" HeaderText="通訊地址" SortExpression="Address" />
+                        <asp:BoundField DataField="Field" HeaderText="專長領域" SortExpression="Field" />
+                        <asp:BoundField DataField="Exam_Point" HeaderText="審查人數" SortExpression="Exam_Point" />
                     </Fields>
                 </asp:DetailsView>
                 <asp:DetailsView ID="Commit_DV_2" runat="server" AutoGenerateRows="False" DataKeyNames="ID" Height="50px" Width="100%">
                     <Fields>
-                        <asp:TemplateField HeaderText="ID" SortExpression="ID">
+                        <asp:TemplateField HeaderText="教師編號" SortExpression="ID">
                             <ItemTemplate>
-                                <asp:DropDownList ID="ID_DDL" runat="server" AutoPostBack="True" DataSourceID="Test_SDS" SelectedValue='<%# Bind("ID") %>' DataTextField="ID" DataValueField="ID" Width="100%">
+                                <asp:DropDownList ID="ID_DDL" runat="server" AutoPostBack="True" DataSourceID="Test_SDS" SelectedValue='<%# Bind("ID") %>' DataTextField="ID" DataValueField="ID" Width="100%" OnSelectedIndexChanged="Commit_DDL_SelectedIndexChanged">
                                 </asp:DropDownList>
                             </ItemTemplate>
                         </asp:TemplateField>
-                        <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
-                        <asp:BoundField DataField="Department" HeaderText="Department" SortExpression="Department" />
-                        <asp:BoundField DataField="Job" HeaderText="Job" SortExpression="Job" />
-                        <asp:BoundField DataField="Degree" HeaderText="Degree" SortExpression="Degree" />
-                        <asp:BoundField DataField="Exp" HeaderText="Exp" SortExpression="Exp" />
-                        <asp:BoundField DataField="Address" HeaderText="Address" SortExpression="Address" />
-                        <asp:BoundField DataField="Field" HeaderText="Field" SortExpression="Field" />
-                        <asp:BoundField DataField="Exam_Point" HeaderText="Exam_Point" SortExpression="Exam_Point" />
+                        <asp:BoundField DataField="Name" HeaderText="教師名稱" SortExpression="Name" />
+                        <asp:BoundField DataField="Department" HeaderText="現職單位" SortExpression="Department" />
+                        <asp:BoundField DataField="Job" HeaderText="職稱" SortExpression="Job" />
+                        <asp:BoundField DataField="Degree" HeaderText="學歷" SortExpression="Degree" />
+                        <asp:BoundField DataField="Exp" HeaderText="經歷" SortExpression="Exp" />
+                        <asp:BoundField DataField="Address" HeaderText="通訊地址" SortExpression="Address" />
+                        <asp:BoundField DataField="Field" HeaderText="專長領域" SortExpression="Field" />
+                        <asp:BoundField DataField="Exam_Point" HeaderText="審查人數" SortExpression="Exam_Point" />
                     </Fields>
                 </asp:DetailsView>
                 <asp:DetailsView ID="Commit_DV_3" runat="server" AutoGenerateRows="False" DataKeyNames="ID" Height="50px" Width="100%">
                     <Fields>
-                        <asp:TemplateField HeaderText="ID" SortExpression="ID">
+                        <asp:TemplateField HeaderText="教師編號" SortExpression="ID">
                             <ItemTemplate>
-                                <asp:DropDownList ID="ID_DDL" runat="server" AutoPostBack="True" DataSourceID="Test_SDS" SelectedValue='<%# Bind("ID") %>' DataTextField="ID" DataValueField="ID" Width="100%">
+                                <asp:DropDownList ID="ID_DDL" runat="server" AutoPostBack="True" DataSourceID="Test_SDS" SelectedValue='<%# Bind("ID") %>' DataTextField="ID" DataValueField="ID" Width="100%" OnSelectedIndexChanged="Commit_DDL_SelectedIndexChanged">
                                 </asp:DropDownList>
                             </ItemTemplate>
                         </asp:TemplateField>
-                        <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
-                        <asp:BoundField DataField="Department" HeaderText="Department" SortExpression="Department" />
-                        <asp:BoundField DataField="Job" HeaderText="Job" SortExpression="Job" />
-                        <asp:BoundField DataField="Degree" HeaderText="Degree" SortExpression="Degree" />
-                        <asp:BoundField DataField="Exp" HeaderText="Exp" SortExpression="Exp" />
-                        <asp:BoundField DataField="Address" HeaderText="Address" SortExpression="Address" />
-                        <asp:BoundField DataField="Field" HeaderText="Field" SortExpression="Field" />
-                        <asp:BoundField DataField="Exam_Point" HeaderText="Exam_Point" SortExpression="Exam_Point" />
+                        <asp:BoundField DataField="Name" HeaderText="教師名稱" SortExpression="Name" />
+                        <asp:BoundField DataField="Department" HeaderText="現職單位" SortExpression="Department" />
+                        <asp:BoundField DataField="Job" HeaderText="職稱" SortExpression="Job" />
+                        <asp:BoundField DataField="Degree" HeaderText="學歷" SortExpression="Degree" />
+                        <asp:BoundField DataField="Exp" HeaderText="經歷" SortExpression="Exp" />
+                        <asp:BoundField DataField="Address" HeaderText="通訊地址" SortExpression="Address" />
+                        <asp:BoundField DataField="Field" HeaderText="專長領域" SortExpression="Field" />
+                        <asp:BoundField DataField="Exam_Point" HeaderText="審查人數" SortExpression="Exam_Point" />
                     </Fields>
                 </asp:DetailsView>
             </td>
@@ -121,7 +121,7 @@
      
     <asp:SqlDataSource ID="Test_SDS" runat="server" ConnectionString="<%$ ConnectionStrings:Project_Db %>" SelectCommand="SELECT [ID] FROM [ExamPoint_Log] WHERE (([Batch] = @Batch) OR ([Batch] = @Batch2))">
         <SelectParameters>
-            <asp:ControlParameter ControlID="Batch_DDL" DefaultValue="0" Name="Batch" PropertyName="SelectedValue" Type="String" />
+            <asp:ControlParameter ControlID="Semester_DDL" DefaultValue="0" Name="Batch" PropertyName="SelectedValue" Type="String" />
             <asp:Parameter DefaultValue="0" Name="Batch2" Type="String" />
         </SelectParameters>
     </asp:SqlDataSource>
