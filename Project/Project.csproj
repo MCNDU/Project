@@ -73,7 +73,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="00_System\00_Description.txt" />
+    <Content Include="00_System\Activation.aspx" />
     <Content Include="00_System\Login.aspx" />
+    <Content Include="00_System\Login_Firsttime.aspx" />
     <Content Include="00_System\User_Login.aspx" />
     <Content Include="00_System\User_Login_Forget_Password.aspx" />
     <Content Include="01_Administrator\AD_1mainpage.aspx" />
@@ -170,12 +172,26 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="00_System\Activation.aspx.cs">
+      <DependentUpon>Activation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="00_System\Activation.aspx.designer.cs">
+      <DependentUpon>Activation.aspx</DependentUpon>
+    </Compile>
     <Compile Include="00_System\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="00_System\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="00_System\Login_Firsttime.aspx.cs">
+      <DependentUpon>Login_Firsttime.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="00_System\Login_Firsttime.aspx.designer.cs">
+      <DependentUpon>Login_Firsttime.aspx</DependentUpon>
     </Compile>
     <Compile Include="00_System\MasterPage.Master.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>

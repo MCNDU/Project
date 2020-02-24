@@ -49,8 +49,13 @@ namespace Project._00_System {
                             Session["Password"] = sdr["Password"].ToString ();
                             Session["Email"] = sdr["Email"].ToString ();
                             Session["Chinese_Name"] = sdr["Chinese_Name"].ToString ();
+                            Session["Activated"] = sdr["Activated"].ToString ();
 
-                            if (sdr.GetValue (0).ToString () == "Student") {
+                            if (sdr["Activated"].ToString () == "0") {
+                                Response.Redirect ("Login_Firsttime.aspx");
+                            }
+
+                            else if (sdr.GetValue (0).ToString () == "Student") {
                                 Response.Redirect ("HomePage_Student.aspx");
                             }
 
