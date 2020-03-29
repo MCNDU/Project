@@ -7,10 +7,12 @@
 // </自動產生的>
 //------------------------------------------------------------------------------
 
-namespace Project._00_System {
+namespace Project._00_System
+{
 
 
-    public partial class Login1 {
+    public partial class Login1
+    {
 
         /// <summary>
         /// Account_IPT 控制項。

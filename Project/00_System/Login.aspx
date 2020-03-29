@@ -56,7 +56,7 @@
 						<span class="txt1">
 							其他選項
 						</span>
-						<a class="txt2" href="#">
+						<a class="txt2" href="">
 							更改密碼
 						</a>
 						<a class="txt2" href="#">
