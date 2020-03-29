@@ -43,19 +43,37 @@ namespace Project._00_System
                 return;
             }
 
-            //SqlDataSource1.Update();
             String cnStr = @"Data Source=(LocalDB)\MSSQLLocalDB;" +
-                    "AttachDBFilename=|DataDirectory|Project_Db.mdf";
-            string sql =
-                "UPDATE User_Login SET [Password] = @Password WHERE [ID] = @ID ";
-            SqlConnection con = new SqlConnection(cnStr);
-            SqlCommand cmd = new SqlCommand();
-            SqlDataReader dr = cmd.ExecuteReader();
-            Session["ID"] = dr["ID"].ToString();
-            cmd.Connection = con;
-            cmd.CommandText = sql;
-            cmd.Parameters.AddWithValue("@ID", Session["ID"]);
-            cmd.Parameters.AddWithValue("@Password", Server.HtmlEncode(Newpassword_IPT.Value));
+                    "AttachDBFilename=|DataDirectory|newdata.mdf";
+            string sql_pro =
+                "UPDATE teacher SET [teacher_password] = @teacher_password WHERE [teacher_id] = @teacher_id ";
+            string sql_stu =
+                "UPDATE student SET [student_password] = @student_password WHERE [student_id] = @student_id ";
+            bool isProfessor = Session["ID"].ToString().Contains("ndmc");
+
+            if(isProfessor)
+            {
+                SqlConnection con = new SqlConnection(cnStr);
+                SqlCommand cmd = new SqlCommand();
+                SqlDataReader dr = cmd.ExecuteReader();
+                Session["ID"] = dr["teacher_id"].ToString();
+                cmd.Connection = con;
+                cmd.CommandText = sql_pro;
+                cmd.Parameters.AddWithValue("@teacher_id", Session["ID"]);
+                cmd.Parameters.AddWithValue("@teacher_password", Server.HtmlEncode(Newpassword_IPT.Value));
+            }
+            else
+            {
+                SqlConnection con = new SqlConnection(cnStr);
+                SqlCommand cmd = new SqlCommand();
+                SqlDataReader dr = cmd.ExecuteReader();
+                Session["ID"] = dr["student_id"].ToString();
+                cmd.Connection = con;
+                cmd.CommandText = sql_stu;
+                cmd.Parameters.AddWithValue("@student_id", Session["ID"]);
+                cmd.Parameters.AddWithValue("@student_password", Server.HtmlEncode(Newpassword_IPT.Value));
+            }
+            
 
             Alert_LB.Text = "密碼已更改";
         }

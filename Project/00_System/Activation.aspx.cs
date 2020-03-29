@@ -17,30 +17,66 @@ namespace Project._00_System
         {
             if (!this.IsPostBack)
             {
-                string constr = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|Project_Db.mdf";
+                string constr = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|newdata.mdf";
                 string activationCode = !string.IsNullOrEmpty(Request.QueryString["ActivationCode"]) ? Request.QueryString["ActivationCode"] : Guid.Empty.ToString();
                 using (SqlConnection con = new SqlConnection(constr))
                 {
-                    using (SqlCommand cmd = new SqlCommand("UPDATE User_Login SET Activated = 1 WHERE ActivationCode = @ActivationCode"))
-                    {
-                        using (SqlDataAdapter sda = new SqlDataAdapter())
+                    string sql_stu =
+                        "Update student Set [Activated] = 1 " +
+                        "Where [ActivationCode] = @ActivationCode";
+                    string sql_pro =
+                        "Update teacher Set [Activated] = 1 " +
+                        "Where [ActivationCode] = @ActivationCode";
+
+                    bool isProfessor = Session["ID"].ToString().Contains("ndmc");
+
+                    if(isProfessor){
+                        using (SqlCommand cmd = new SqlCommand(sql_pro))
                         {
-                            //cmd.CommandType = CommandType.Text;
-                            cmd.Parameters.AddWithValue("@ActivationCode", activationCode);
-                            cmd.Connection = con;
-                            con.Open();
-                            int rowsAffected = cmd.ExecuteNonQuery();
-                            con.Close();
-                            if (rowsAffected == 1)
+                            using (SqlDataAdapter sda = new SqlDataAdapter())
                             {
-                                Alert_LB.Text = "Activation successful.";
-                            }
-                            else
-                            {
-                                Alert_LB.Text = "Invalid Activation code.";
+                                //cmd.CommandType = CommandType.Text;
+                                cmd.Parameters.AddWithValue("@ActivationCode", activationCode);
+                                cmd.Connection = con;
+                                con.Open();
+                                int rowsAffected = cmd.ExecuteNonQuery();
+                                con.Close();
+                                if (rowsAffected == 1)
+                                {
+                                    Alert_LB.Text = "Activation successful.";
+                                }
+                                else
+                                {
+                                    Alert_LB.Text = "Invalid Activation code.";
+                                }
                             }
                         }
                     }
+                    else
+                    {
+                        using (SqlCommand cmd = new SqlCommand(sql_stu))
+                        {
+                            using (SqlDataAdapter sda = new SqlDataAdapter())
+                            {
+                                //cmd.CommandType = CommandType.Text;
+                                cmd.Parameters.AddWithValue("@ActivationCode", activationCode);
+                                cmd.Connection = con;
+                                con.Open();
+                                int rowsAffected = cmd.ExecuteNonQuery();
+                                con.Close();
+                                if (rowsAffected == 1)
+                                {
+                                    Alert_LB.Text = "Activation successful.";
+                                }
+                                else
+                                {
+                                    Alert_LB.Text = "Invalid Activation code.";
+                                }
+                            }
+                        }
+                    }
+
+                    
                 }
             }
 

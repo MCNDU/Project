@@ -19,22 +19,50 @@ namespace Project._00_System
         protected void BtnEnter_Click(object sender, EventArgs e){
 
             string activationCode = Guid.NewGuid().ToString();
-            string constr = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|Project_Db.mdf";
+            string constr = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|newdata.mdf";
+            string sql_stu =
+                "Update student set [ActivationCode] = @ActivationCode " +
+                "Where [student_id] = @student_id";
+            string sql_pro =
+                "Update teacher Set [ActivationCode] = @ActivationCode " +
+                "Where [teacher_id] = @teacher_id";
+
+            bool isProfessor = Session["ID"].ToString().Contains("ndmc");
+
             using (SqlConnection con = new SqlConnection(constr))
             {
-                using (SqlCommand cmd1 = new SqlCommand("UPDATE User_Login SET [ActivationCode] = @ActivationCode WHERE [ID] = @ID", con))
+                if(isProfessor)
                 {
-                    using (SqlDataAdapter sda = new SqlDataAdapter())
+                    using (SqlCommand cmd1 = new SqlCommand(sql_pro, con))
                     {
-                        //cmd1.CommandType = CommandType.Text;
-                        cmd1.Parameters.AddWithValue("@ID", Session["ID"]);
-                        cmd1.Parameters.AddWithValue("@ActivationCode", activationCode);
-                        cmd1.Connection = con;
-                        con.Open();
-                        cmd1.ExecuteNonQuery();
-                        con.Close();
+                        using (SqlDataAdapter sda = new SqlDataAdapter())
+                        {
+                            //cmd1.CommandType = CommandType.Text;
+                            cmd1.Parameters.AddWithValue("@teacher_id", Session["teacher_id"]);
+                            cmd1.Parameters.AddWithValue("@ActivationCode", activationCode);
+                            cmd1.Connection = con;
+                            con.Open();
+                            cmd1.ExecuteNonQuery();
+                            con.Close();
+                        }
                     }
                 }
+                else{
+                    using (SqlCommand cmd1 = new SqlCommand(sql_stu, con))
+                    {
+                        using (SqlDataAdapter sda = new SqlDataAdapter())
+                        {
+                            //cmd1.CommandType = CommandType.Text;
+                            cmd1.Parameters.AddWithValue("@student_id", Session["student_id"]);
+                            cmd1.Parameters.AddWithValue("@ActivationCode", activationCode);
+                            cmd1.Connection = con;
+                            con.Open();
+                            cmd1.ExecuteNonQuery();
+                            con.Close();
+                        }
+                    }
+                }
+                
             }
 
             
