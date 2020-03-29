@@ -85,11 +85,13 @@
     <Content Include="01_Administrator\AD_Manage_Prof.aspx" />
     <Content Include="01_Administrator\AD_Prof_Assign.aspx" />
     <Content Include="01_Administrator\01_Description.txt" />
+    <Content Include="02_Professor\PR_IN_personalinfo.aspx" />
     <Content Include="02_Professor\PR_IN_mainpage.aspx" />
     <Content Include="02_Professor\PR_RE_mainpage.aspx" />
     <Content Include="02_Professor\PR_selectrole.aspx" />
     <Content Include="02_Professor\PR_selectroleAD.aspx" />
     <Content Include="03_Student\03_Disciption.txt" />
+    <Content Include="03_Student\ST_6personalinfo.aspx" />
     <Content Include="03_Student\ST_1mainpage.aspx" />
     <Content Include="03_Student\ST_Choose_Prof.aspx" />
     <Content Include="03_Student\ST_Personalnfo.aspx" />
@@ -274,6 +276,13 @@
     <Compile Include="01_Administrator\AD_Prof_Assign.aspx.designer.cs">
       <DependentUpon>AD_Prof_Assign.aspx</DependentUpon>
     </Compile>
+    <Compile Include="02_Professor\PR_IN_personalinfo.aspx.cs">
+      <DependentUpon>PR_IN_personalinfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="02_Professor\PR_IN_personalinfo.aspx.designer.cs">
+      <DependentUpon>PR_IN_personalinfo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="02_Professor\PR_IN_mainpage.aspx.cs">
       <DependentUpon>PR_IN_mainpage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -301,6 +310,13 @@
     </Compile>
     <Compile Include="02_Professor\PR_selectroleAD.aspx.designer.cs">
       <DependentUpon>PR_selectroleAD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="03_Student\ST_6personalinfo.aspx.cs">
+      <DependentUpon>ST_6personalinfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="03_Student\ST_6personalinfo.aspx.designer.cs">
+      <DependentUpon>ST_6personalinfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="03_Student\ST_1mainpage.aspx.cs">
       <DependentUpon>ST_1mainpage.aspx</DependentUpon>
