@@ -13,7 +13,7 @@ namespace Project._00_System {
         //連結資料庫，命名為cnStr
         //@"資料來源=(本地資料庫)\"
         readonly String cnStr = @"Data Source=(LocalDB)\MSSQLLocalDB;" +
-                    "AttachDBFilename=|DataDirectory|Project_Db.mdf";
+                    "AttachDBFilename=|DataDirectory|newdata.mdf";
         
         protected void Page_Load (object sender, EventArgs e) {
 
@@ -29,50 +29,93 @@ namespace Project._00_System {
 
         protected void BtnLogin_Click (object sender, EventArgs e) {
             
-            string sql =
-                "Select * From User_Login Where [ID] = @ID " +
-                "and [Password] = @Password";
+            string sql_stu =
+                "Select * From student Where [student_id] = @student_id " +
+                "and [student_password] = @student_password";
+            string sql_pro =
+                "Select * From teacher Where [teacher_id] = @teacher_id " +
+                "and [teacher_password] = @teacher_password";
+
+            bool isProfessor = Account_IPT.Value.Contains("ndmc");
+
             using (SqlConnection con = new SqlConnection (cnStr)) {
                 using (SqlCommand cmd = new SqlCommand ()) {
                     cmd.Connection = con;
-                    cmd.CommandText = sql;
-                    cmd.Parameters.AddWithValue ("@ID", Server.HtmlEncode (Account_IPT.Value));
-                    cmd.Parameters.AddWithValue ("@Password", Server.HtmlEncode (Password_IPT.Value));
+                    if(isProfessor)
+                    {
+                        cmd.CommandText = sql_pro;
+                        cmd.Parameters.AddWithValue("@teacher_id", Server.HtmlEncode(Account_IPT.Value));
+                        cmd.Parameters.AddWithValue("@teacher_password", Server.HtmlEncode(Password_IPT.Value));
+                    }
+                    else
+                    {
+                        cmd.CommandText = sql_stu;
+                        cmd.Parameters.AddWithValue("@student_id", Server.HtmlEncode(Account_IPT.Value));
+                        cmd.Parameters.AddWithValue("@student_password", Server.HtmlEncode(Password_IPT.Value));
+                    }
+                    
 
                     con.Open ();
                     using (SqlDataReader sdr = cmd.ExecuteReader ()) {
-                        if (sdr.HasRows) {
+                        if (sdr.HasRows)
+                        {
 
                             Session["Login"] = "OK";
-                            sdr.Read ();
-                            Session["ID"] = sdr["ID"].ToString ();
-                            Session["Password"] = sdr["Password"].ToString ();
-                            Session["Email"] = sdr["Email"].ToString ();
-                            Session["Chinese_Name"] = sdr["Chinese_Name"].ToString ();
-                            Session["Activated"] = sdr["Activated"].ToString();
-
-                            if (sdr["Activated"].ToString() == "0")
+                            sdr.Read();
+                            if (isProfessor)
                             {
-                                Response.Redirect("Login_Firsttime.aspx");
-                            }
+                                Session["ID"] = sdr["teacher_id"].ToString();
+                                Session["Password"] = sdr["teacher_password"].ToString();
+                                Session["Activated"] = sdr["Activated"].ToString();
+                                Session["is_admin"] = sdr["is_admin"].ToString();
 
-                            else if (sdr.GetValue (0).ToString () == "Student") {
-                                Response.Redirect ("HomePage_Student.aspx");
-                            }
+                                if (sdr["Activated"].ToString() == "0")
+                                {
+                                    Response.Redirect("Login_Firsttime.aspx");
+                                }
+                                else if (sdr["Activated"].ToString() == "1")
+                                {
+                                    if (sdr["is_admin"].ToString() == "1")
+                                    {
+                                        Response.Redirect("../02_Professor/PR_selectroleAD.aspx");
+                                    }
+                                    else
+                                    {
+                                        Response.Redirect("../02_Professor/PR_selectrole.aspx");
+                                    }
+                                }
+                                else
+                                {
+                                    Response.Redirect("Login.aspx");
+                                }
 
-                            else if (sdr.GetValue (0).ToString () == "Teacher") {
-                                Response.Redirect ("HomePage_Teacher.aspx");
-                            }
 
-                            else if (sdr.GetValue (0).ToString () == "Admin") {
-                                Response.Redirect ("../01_Administrator/AD_1mainpage.aspx");
                             }
+                            else
+                            {
+                                Session["ID"] = sdr["student_id"].ToString();
+                                Session["Password"] = sdr["student_password"].ToString();
+                                Session["Activated"] = sdr["Activated"].ToString();
 
-                            else {
-                                Response.Redirect ("Login.aspx");
+                                if (sdr["Activated"].ToString() == "0")
+                                {
+                                    Response.Redirect("Login_Firsttime.aspx");
+                                }
+                                else if (sdr["Activated"].ToString() == "1")
+                                {
+                                    Response.Redirect("../03_Student/ST_1mainpage.aspx");
+                                }
+                                else
+                                {
+                                    Response.Redirect("Login.aspx");
+                                }
+
                             }
                         }
-                        else {
+
+
+                        else
+                        {
                             Alert_LB.Text = "<script>window.alert(\"帳號或密碼錯誤\");</script>";
                             return;
                         }
