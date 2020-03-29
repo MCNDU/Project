@@ -14,16 +14,19 @@
             box-shadow:0px 8px 8px 0px #808080 ">&nbsp碩士論文進修審查系統</h1><p><marquee behavior="scroll" direction="left" height="29" class="margu" font-family=微軟正黑體>
           碩士論文進修審查系統
         </marquee>
-        </p>
            <div class="vertical-menu">
             <a href="AD_1mainpage.aspx" class="active">Home</a>
-            <a href="AD_2points.aspx">指導老師積點</a>
-            <a href="AD_3students.aspx">論文審查</a>
-            <a href="AD_4oral.aspx">論文口試</a>
-            <a href="AD_5addcredits.aspx">論文加分</a>
-            <a href="login.aspx">登出</a>
+            <a href="AD_Manage_Account.aspx">研究生管理</a>
+            <a href="AD_Manage_Prof.aspx">指導老師管理</a>
+            <a href="AD_ChooseSemAndSt.aspx">研究生與論文計畫書</a>
+            <a href="AD_GuidePoint.aspx">指導老師積點</a>
+            <a href="AD_Prof_Assign.aspx">分配審查委員</a>
+            <a href="AD_Examine_List.aspx">顯示審查結果</a>
+            <a href="">論文口試</a>
+            <a href="">論文加分</a>
+            <a href="../00_System/login.aspx">登出</a>
             </div>
-        <div class = "info"> </div>
+            <div class = "info"> </div>
     </form>
 </body>
 </html>

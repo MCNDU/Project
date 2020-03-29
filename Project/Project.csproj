@@ -85,9 +85,16 @@
     <Content Include="01_Administrator\AD_Manage_Prof.aspx" />
     <Content Include="01_Administrator\AD_Prof_Assign.aspx" />
     <Content Include="01_Administrator\01_Description.txt" />
+    <Content Include="02_Professor\PR_IN_mainpage.aspx" />
+    <Content Include="02_Professor\PR_RE_mainpage.aspx" />
+    <Content Include="02_Professor\PR_selectrole.aspx" />
+    <Content Include="02_Professor\PR_selectroleAD.aspx" />
     <Content Include="03_Student\03_Disciption.txt" />
+    <Content Include="03_Student\ST_1mainpage.aspx" />
     <Content Include="03_Student\ST_Choose_Prof.aspx" />
     <Content Include="03_Student\ST_Personalnfo.aspx" />
+    <Content Include="App_Data\newdata.mdf" />
+    <Content Include="App_Data\newdata_log.ldf" />
     <Content Include="App_Data\Project_Db.mdf" />
     <Content Include="App_Data\Project_Db_log.ldf">
       <DependentUpon>Project_Db.mdf</DependentUpon>
@@ -161,6 +168,9 @@
     <Content Include="css_1\StyleSheet.css" />
     <Content Include="css_1\util.css" />
     <Content Include="Global.asax" />
+    <Content Include="Image\1admin.jpg" />
+    <Content Include="Image\2instructor.jpg" />
+    <Content Include="Image\3reviewer.jpg" />
     <Content Include="Image\img-01.png" />
     <Content Include="Image\User_Login_BG.jpg" />
     <Content Include="js\bootstrap.js" />
@@ -264,6 +274,41 @@
     <Compile Include="01_Administrator\AD_Prof_Assign.aspx.designer.cs">
       <DependentUpon>AD_Prof_Assign.aspx</DependentUpon>
     </Compile>
+    <Compile Include="02_Professor\PR_IN_mainpage.aspx.cs">
+      <DependentUpon>PR_IN_mainpage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="02_Professor\PR_IN_mainpage.aspx.designer.cs">
+      <DependentUpon>PR_IN_mainpage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="02_Professor\PR_RE_mainpage.aspx.cs">
+      <DependentUpon>PR_RE_mainpage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="02_Professor\PR_RE_mainpage.aspx.designer.cs">
+      <DependentUpon>PR_RE_mainpage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="02_Professor\PR_selectrole.aspx.cs">
+      <DependentUpon>PR_selectrole.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="02_Professor\PR_selectrole.aspx.designer.cs">
+      <DependentUpon>PR_selectrole.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="02_Professor\PR_selectroleAD.aspx.cs">
+      <DependentUpon>PR_selectroleAD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="02_Professor\PR_selectroleAD.aspx.designer.cs">
+      <DependentUpon>PR_selectroleAD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="03_Student\ST_1mainpage.aspx.cs">
+      <DependentUpon>ST_1mainpage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="03_Student\ST_1mainpage.aspx.designer.cs">
+      <DependentUpon>ST_1mainpage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="03_Student\ST_Choose_Prof.aspx.cs">
       <DependentUpon>ST_Choose_Prof.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -327,7 +372,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="02_Professor\" />
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <ItemGroup>
